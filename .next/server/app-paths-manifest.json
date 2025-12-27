@@ -1,5 +1,10 @@
 {
+  "/_not-found/page": "app/_not-found/page.js",
+  "/api/decisions/export/route": "app/api/decisions/export/route.js",
+  "/audits/new/page": "app/audits/new/page.js",
+  "/decisions/[id]/page": "app/decisions/[id]/page.js",
+  "/decisions/new/page": "app/decisions/new/page.js",
+  "/audits/page": "app/audits/page.js",
   "/page": "app/page.js",
-  "/decisions/page": "app/decisions/page.js",
-  "/decisions/new/page": "app/decisions/new/page.js"
+  "/decisions/page": "app/decisions/page.js"
 }

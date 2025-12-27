@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Header } from "@/components/layout/Header";
 import { Button } from "@/components/ui/button"; 
 import { Input } from "@/components/ui/input";
-import { Plus, Search, Filter } from "lucide-react";
+import { Plus, Search, Filter, Download } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { db } from "@/lib/db";
 import { DecisionsFilter } from "@/components/decisions/DecisionsFilter";
@@ -40,12 +40,20 @@ export default async function DecisionsPage({ searchParams }: { searchParams: { 
   return (
     <div>
       <Header title="Decisions">
-        <Link href="/decisions/new">
-          <Button className="flex items-center gap-2">
-            <Plus className="h-4 w-4" />
-            New Decision
-          </Button>
-        </Link>
+        <div className="flex gap-2">
+           <a href="/api/decisions/export" download>
+              <Button variant="outline" className="flex items-center gap-2">
+                <Download className="h-4 w-4" />
+                Export CSV
+              </Button>
+           </a>
+           <Link href="/decisions/new">
+             <Button className="flex items-center gap-2">
+               <Plus className="h-4 w-4" />
+               New Decision
+             </Button>
+           </Link>
+        </div>
       </Header>
       
       <div className="p-8 space-y-6">
