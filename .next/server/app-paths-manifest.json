@@ -1,5 +1,4 @@
 {
-  "/_not-found/page": "app/_not-found/page.js",
-  "/dashboard/getTaxDecisions/new/page": "app/dashboard/getTaxDecisions/new/page.js",
-  "/dashboard/getTaxDecisions/page": "app/dashboard/getTaxDecisions/page.js"
+  "/dashboard/getTaxDecisions/page": "app/dashboard/getTaxDecisions/page.js",
+  "/dashboard/getTaxDecisions/new/page": "app/dashboard/getTaxDecisions/new/page.js"
 }
