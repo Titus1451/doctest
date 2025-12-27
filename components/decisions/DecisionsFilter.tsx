@@ -9,7 +9,9 @@ import {
   SelectValue 
 } from "@/components/ui/select";
 
-export function DecisionsFilter({ jurisdictions }: { jurisdictions: any[] }) {
+import { JURISDICTIONS } from "@/lib/constants";
+
+export function DecisionsFilter() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const pathname = usePathname();
@@ -69,8 +71,8 @@ export function DecisionsFilter({ jurisdictions }: { jurisdictions: any[] }) {
           </SelectTrigger>
           <SelectContent>
             <SelectItem value="ALL">All Jurisdictions</SelectItem>
-            {jurisdictions.map((j) => (
-              <SelectItem key={j.id} value={j.code}>
+            {JURISDICTIONS.map((j) => (
+              <SelectItem key={j.code} value={j.code}>
                 {j.code} - {j.name}
               </SelectItem>
             ))}

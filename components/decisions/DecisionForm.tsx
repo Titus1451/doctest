@@ -9,6 +9,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useFormStatus } from "react-dom";
 
+import { JURISDICTIONS } from "@/lib/constants";
+
 function SubmitButton() {
   const { pending } = useFormStatus();
 
@@ -19,7 +21,7 @@ function SubmitButton() {
   );
 }
 
-export function DecisionForm({ jurisdictions }: { jurisdictions: any[] }) {
+export function DecisionForm() {
   const [links, setLinks] = React.useState<string[]>([]);
   const [currentLink, setCurrentLink] = React.useState("");
   const [selectedJurisdictions, setSelectedJurisdictions] = React.useState<string[]>([]);
@@ -107,9 +109,9 @@ export function DecisionForm({ jurisdictions }: { jurisdictions: any[] }) {
              </div>
              <div className="absolute top-full left-0 z-50 w-full min-w-[8rem] overflow-hidden rounded-md border bg-white text-slate-950 shadow-md animate-in fade-in-0 zoom-in-95 hidden group-hover:block hover:block">
                 <div className="max-h-64 overflow-y-auto p-1">
-                  {jurisdictions.map((j) => (
+                  {JURISDICTIONS.map((j) => (
                     <div 
-                      key={j.id} 
+                      key={j.code} 
                       className={cn(
                         "relative flex cursor-pointer select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none transition-colors hover:bg-slate-100 hover:text-slate-900",
                         selectedJurisdictions.includes(j.code) && "bg-slate-50 font-medium"

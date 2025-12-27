@@ -7,15 +7,14 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { db } from "@/lib/db";
 import { DecisionsFilter } from "@/components/decisions/DecisionsFilter";
 import { cn } from "@/lib";
+import { JURISDICTIONS } from "@/lib/constants";
 
 async function getDecisions(jurisdictionFilter?: string, query?: string) {
   const where: any = {};
   
   if (jurisdictionFilter && jurisdictionFilter !== 'ALL') {
-    where.jurisdictions = {
-      some: {
-        code: jurisdictionFilter
-      }
+    where.jurisdictionCodes = {
+      contains: jurisdictionFilter
     };
   }
 
@@ -29,13 +28,16 @@ async function getDecisions(jurisdictionFilter?: string, query?: string) {
   return await db.decision.findMany({
     where,
     orderBy: { updatedAt: 'desc' },
-    include: { jurisdictions: true, author: true }
+    include: { author: true }
   });
+}
+
+const getJurisdictionName = (code: string) => {
+  return JURISDICTIONS.find(j => j.code === code)?.name || code;
 }
 
 export default async function DecisionsPage({ searchParams }: { searchParams: { jurisdiction?: string, query?: string } }) {
   const decisions = await getDecisions(searchParams.jurisdiction, searchParams.query);
-  const jurisdictions = await db.jurisdiction.findMany({ orderBy: { name: 'asc' } });
 
   return (
     <div>
@@ -59,7 +61,7 @@ export default async function DecisionsPage({ searchParams }: { searchParams: { 
       <div className="p-8 space-y-6">
         {/* Search & Filter Bar */}
         <div className="flex items-center justify-between">
-          <DecisionsFilter jurisdictions={jurisdictions} />
+          <DecisionsFilter />
         </div>
 
         {/* Decisions List */}
@@ -79,9 +81,9 @@ export default async function DecisionsPage({ searchParams }: { searchParams: { 
                          <p className="text-sm text-slate-500 line-clamp-2">{decision.summary}</p>
                          
                          <div className="flex flex-wrap gap-2 mt-2">
-                           {decision.jurisdictions.map((j: any) => (
-                             <span key={j.id} className="px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wider rounded-md bg-slate-100 text-slate-700 border border-slate-200">
-                               {j.code}
+                           {decision.jurisdictionCodes?.split(',').filter(Boolean).map((code) => (
+                             <span key={code} className="px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wider rounded-md bg-slate-100 text-slate-700 border border-slate-200">
+                               {code}
                              </span>
                            ))}
                          </div>

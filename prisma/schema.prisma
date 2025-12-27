@@ -29,17 +29,9 @@ model Decision {
   createdAt    DateTime       @default(now())
   updatedAt    DateTime       @updatedAt
   evidence     Evidence[]
-  jurisdictions Jurisdiction[]
+  jurisdictionCodes String?   // Comma separated codes
   authorId     String?
   author       User?          @relation(fields: [authorId], references: [id])
-}
-
-model Jurisdiction {
-  id        String     @id @default(cuid())
-  code      String     @unique // US, CA, US-TX, CA-ON
-  name      String
-  type      String // COUNTRY, STATE, PROVINCE
-  decisions Decision[]
 }
 
 model AuditExplanation {

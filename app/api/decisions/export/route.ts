@@ -5,7 +5,6 @@ export async function GET() {
   try {
     const decisions = await db.decision.findMany({
       include: {
-        jurisdictions: true,
         author: true,
         evidence: true
       },
@@ -36,7 +35,7 @@ export async function GET() {
         return `"${str.replace(/"/g, '""')}"`; // internal quotes escaped as ""
       };
 
-      const jurisdictions = decision.jurisdictions.map(j => j.code).join('; ');
+      const jurisdictions = decision.jurisdictionCodes || '';
       const links = decision.evidence
         .filter(e => e.fileType === 'LINK')
         .map(e => e.fileUrl)

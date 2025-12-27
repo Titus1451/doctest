@@ -73,10 +73,7 @@ export async function createDecision(formData: FormData) {
       status: status || "DRAFT",
       taxType,
       author: adminUser ? { connect: { id: adminUser.id } } : undefined,
-      // Map jurisdiction codes to connect
-      jurisdictions: {
-        connect: jurisdictions.map(code => ({ code }))
-      },
+      jurisdictionCodes: jurisdictions.join(','),
       evidence: {
         create: evidenceData
       }
