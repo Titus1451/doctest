@@ -5,7 +5,7 @@ import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { writeFile, mkdir } from "fs/promises";
 import { join } from "path";
-import { getServerSession } from "next-auth";
+import { getServerSession } from "next-auth/next";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 /* ✅ Explicit type instead of Prisma internal types */
 type EvidenceCreateInput = {
@@ -70,7 +70,7 @@ export async function createDecision(formData: FormData) {
   /* ✅ FIX: Get session user instead of DB lookup */
   const session = await getServerSession(authOptions as any);
   // @ts-ignore
-  const userId = session?.user?.id || "Unknown"; 
+  const userEmail = session?.user?.email || "Unknown"; 
 
   await db.decision.create({
     data: {
@@ -79,9 +79,9 @@ export async function createDecision(formData: FormData) {
       rationale,
       status: status || "DRAFT",
       taxType,
-      authorId: userId, // ✅ Simply set the string ID (or "Unknown")
-      createdBy: userId,
-      updatedBy: userId,
+      authorId: userEmail, // ✅ Simply set the string ID (or "Unknown")
+      createdBy: userEmail,
+      updatedBy: userEmail,
       jurisdictionCodes: jurisdictions.join(","),
       evidence: evidenceData.length
         ? { create: evidenceData } // ✅ array form
@@ -91,4 +91,51 @@ export async function createDecision(formData: FormData) {
 
   revalidatePath("/dashboard/getTaxDecisions");
   redirect("/dashboard/getTaxDecisions");
+}
+
+/* ✅ NEW: Update Decision Action */
+export async function updateDecision(id: string, formData: FormData) {
+  const session = await getServerSession(authOptions as any);
+
+  console.log("session: ", session); 
+  // @ts-ignore
+  const userRole = session?.user?.role;
+  // @ts-ignore
+  const userEmail = session?.user?.email || "Unknown";
+
+  if (userRole !== "TAX_TECH") {
+    throw new Error("Unauthorized: Only TAX_TECH can update decisions");
+  }
+
+  const title = formData.get("title") as string;
+  const summary = formData.get("summary") as string;
+  const rationale = formData.get("rationale") as string;
+  const status = formData.get("status") as string;
+  const taxType = formData.get("taxType") as string;
+  const jurisdictions = formData.getAll("jurisdictions") as string[];
+
+  /*
+   Note: For simplicity in this implementation, we are NOT handling new file uploads 
+   during update in this specific action yet, or assuming they are handled separately.
+   If reusing DecisionForm, it might send files. Handling file updates + deletions 
+   complex logic (delta updates). For now we focus on fields.
+   */
+
+  await db.decision.update({
+    where: { id },
+    data: {
+      title,
+      summary,
+      rationale,
+      status,
+      taxType,
+      jurisdictionCodes: jurisdictions.join(","),
+      updatedBy: userEmail,
+      // updatedAt is auto-handled by Prisma @updatedAt
+    },
+  });
+
+  revalidatePath(`/dashboard/getTaxDecisions/${id}`);
+  revalidatePath("/dashboard/getTaxDecisions");
+  redirect(`/dashboard/getTaxDecisions/${id}`);
 }

@@ -16,11 +16,11 @@ export const authOptions = {
           // Static Auth Implementation
           if (email === 'john@gmail.com' && password === '123') {
             return {
-              id: 'static-user-id',
-              email: 'john@gmail.com',
+              id: '12345677554',
+              email: 'sarah@gmail.com',
               role: 'TAX_TECH',
-              firstName: 'John',
-              lastName: 'Doe',
+              firstName: 'Sarah',
+              lastName: 'Smith',
               isApproved: true,
             };
           }

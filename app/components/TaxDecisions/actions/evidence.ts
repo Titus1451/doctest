@@ -2,51 +2,68 @@
 
 import { db } from "@/lib/TaxDecisions/db";
 import { revalidatePath } from "next/cache";
-import { writeFile } from "fs/promises";
+import { writeFile, mkdir } from "fs/promises";
 import { join } from "path";
-import { getServerSession } from "next-auth";
+import { getServerSession } from "next-auth/next";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 
 export async function uploadEvidence(formData: FormData) {
-  const file = formData.get("file") as File;
-  const notes = formData.get("notes") as string;
+  const files = formData.getAll("files") as File[];
+  const links = formData.getAll("links") as string[];
   const decisionId = formData.get("decisionId") as string;
-  // const auditId = formData.get("auditId") as string;
-
-  if (!file) return;
 
   const session = await getServerSession(authOptions as any);
   // @ts-ignore
   const userEmail = session?.user?.email || "Unknown";
 
-  const bytes = await file.arrayBuffer();
-  const buffer = Buffer.from(bytes);
-
-  // In a real app, upload to S3. Here, save to public/uploads
   const uploadDir = join(process.cwd(), "public/uploads");
-  const uniqueName = `${Date.now()}-${file.name.replace(/\s/g, '-')}`;
-  const filePath = join(uploadDir, uniqueName);
-  
-  try {
-    // Ensure dir exists (or rely on it being there)
-    // await mkdir(uploadDir, { recursive: true });
-    await writeFile(filePath, buffer);
-  } catch (e) {
-    console.error("Upload error", e);
-    return;
+  await mkdir(uploadDir, { recursive: true });
+
+  const evidenceData = [];
+
+  // Handle Links
+  for (const link of links) {
+    if (link && link.trim() !== "") {
+      evidenceData.push({
+        fileName: link,
+        fileUrl: link,
+        fileType: "LINK",
+        notes: "External Link",
+        decisionId,
+        createdBy: userEmail,
+      });
+    }
   }
 
-  await db.evidence.create({
-    data: {
+  // Handle Files
+  for (const file of files) {
+    if (file.size === 0) continue;
+
+    const bytes = await file.arrayBuffer();
+    const buffer = Buffer.from(bytes);
+
+    const uniqueName = `${Date.now()}-${file.name.replace(/\s/g, '-')}`;
+    const filePath = join(uploadDir, uniqueName);
+    
+    await writeFile(filePath, buffer);
+
+    evidenceData.push({
       fileName: file.name,
       fileUrl: `/uploads/${uniqueName}`,
       fileType: file.type,
-      notes,
-      decisionId: decisionId || undefined,
+      notes: "Uploaded during edit",
+      decisionId,
       createdBy: userEmail,
-      // auditExplanationId: auditId || undefined,
+    });
+  }
+
+  if (evidenceData.length > 0) {
+    // Prisma createMany is useful here if supported by the provider, 
+    // but for safety and specific fields, we can use a loop or transactional create.
+    for (const data of evidenceData) {
+      await db.evidence.create({ data });
     }
-  });
+  }
 
   revalidatePath("/dashboard/getTaxDecisions");
   revalidatePath(`/dashboard/getTaxDecisions/${decisionId}`);

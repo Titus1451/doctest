@@ -1,9 +1,10 @@
 {
   "pages": {
-    "/dashboard/getTaxDecisions/page": [
+    "/(auth)/login/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/dashboard/getTaxDecisions/page.js"
+      "static/css/app/(auth)/login/page.css",
+      "static/chunks/app/(auth)/login/page.js"
     ],
     "/layout": [
       "static/chunks/webpack.js",
@@ -11,15 +12,20 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/dashboard/getTaxDecisions/new/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/dashboard/getTaxDecisions/new/page.js"
-    ],
     "/dashboard/getTaxDecisions/[id]/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/dashboard/getTaxDecisions/[id]/page.js"
+    ],
+    "/dashboard/getTaxDecisions/[id]/edit/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/dashboard/getTaxDecisions/[id]/edit/page.js"
+    ],
+    "/dashboard/getTaxDecisions/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/dashboard/getTaxDecisions/page.js"
     ]
   }
 }
