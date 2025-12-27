@@ -1,0 +1,67 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  name      String?
+  role      String   @default("VIEWER") // ADMIN, EDITOR, VIEWER
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  decisions Decision[]
+}
+
+model Decision {
+  id           String         @id @default(cuid())
+  title        String
+  summary      String
+  rationale    String // Rich text or markdown content
+  jurisdiction String? // Kept for backward compatibility or legacy text
+  taxType      String?
+  status       String         @default("DRAFT") // DRAFT, FINAL, DEPRECATED
+  tags         String? // Comma separated tags
+  createdAt    DateTime       @default(now())
+  updatedAt    DateTime       @updatedAt
+  evidence     Evidence[]
+  jurisdictions Jurisdiction[]
+  authorId     String?
+  author       User?          @relation(fields: [authorId], references: [id])
+}
+
+model Jurisdiction {
+  id        String     @id @default(cuid())
+  code      String     @unique // US, CA, US-TX, CA-ON
+  name      String
+  type      String // COUNTRY, STATE, PROVINCE
+  decisions Decision[]
+}
+
+model AuditExplanation {
+  id        String     @id @default(cuid())
+  title     String
+  context   String
+  narrative String
+  outcome   String?
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @updatedAt
+  evidence  Evidence[]
+}
+
+model Evidence {
+  id                 String            @id @default(cuid())
+  fileName           String
+  fileUrl            String
+  fileType           String
+  notes              String?
+  uploadedAt         DateTime          @default(now())
+  decisionId         String?
+  decision           Decision?         @relation(fields: [decisionId], references: [id])
+  auditExplanationId String?
+  auditExplanation   AuditExplanation? @relation(fields: [auditExplanationId], references: [id])
+}

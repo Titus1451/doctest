@@ -1,0 +1,14 @@
+{
+  "node": {
+    "a27334549c40f73d31efc77c023d42e0a2848918": {
+      "workers": {
+        "app/decisions/new/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Ftitusay%2FCoding%20Projects%2Fdoctest%2Fapp%2Factions%2Fdecisions.ts%22%2C%5B%22createDecision%22%5D%5D%5D&__client_imported__=true!"
+      },
+      "layer": {
+        "app/decisions/new/page": "action-browser"
+      }
+    }
+  },
+  "edge": {},
+  "encryptionKey": "nDok7HMd6IDWC/mx710rCswlhGCSNy0ZDzNBpBYbB4U="
+}
