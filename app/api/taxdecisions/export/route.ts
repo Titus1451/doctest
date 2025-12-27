@@ -17,6 +17,7 @@ export async function GET() {
       "ID",
       "Title",
       "Summary",
+      "rationale",
       "Status",
       "Tax Type",
       "Jurisdictions",
@@ -24,6 +25,7 @@ export async function GET() {
       "Created Date",
       "Updated Date",
       "External Links",
+      "Files",
     ];
 
     const safe = (str?: string | null) =>
@@ -41,10 +43,16 @@ export async function GET() {
         .map((e) => e.fileUrl)
         .join("; ");
 
+    const files = decision.evidence
+        .filter((e) => e.fileType !== "LINK")
+        .map((e) => e.fileName)
+        .join("; ");
+
       return [
         safe(decision.id),
         safe(decision.title),
         safe(decision.summary),
+        safe(decision.rationale),
         safe(decision.status),
         safe(decision.taxType),
         safe(jurisdictions),
@@ -52,6 +60,7 @@ export async function GET() {
         safe(decision.createdAt.toISOString()),
         safe(decision.updatedAt.toISOString()),
         safe(links),
+        safe(files),
       ].join(",");
     });
 
