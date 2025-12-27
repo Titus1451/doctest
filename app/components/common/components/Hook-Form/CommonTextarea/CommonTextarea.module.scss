@@ -1,0 +1,44 @@
+@import "mixins.scss";
+@import "typography.scss";
+@import "colors.scss";
+
+.common-textarea {
+  position: relative;
+
+  &.focus {
+    textarea {
+      &::placeholder {
+        color: darken($lt-gray, 25%);
+      }
+      border: 1px solid darken($lt-gray, 25%);
+    }
+  }
+
+  &.error textarea {
+    border-color: $bright-red;
+  }
+  > div {
+    @include error-message;
+  }
+  textarea {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    border: 1px solid $lt-gray;
+    font: 16px/1em $roboto;
+    color: $black;
+    resize: none;
+    color: $black;
+    -webkit-appearance: none;
+    &::placeholder {
+      color: $lt-gray;
+    }
+    &:-webkit-autofill {
+      -webkit-box-shadow: 0 0 0px 1000px $white inset;
+      box-shadow: 0 0 0px 1000px $white inset;
+    }
+    &:global(.focus-visible) {
+      outline: none !important;
+    }
+  }
+}

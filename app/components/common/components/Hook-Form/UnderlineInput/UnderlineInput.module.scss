@@ -1,0 +1,44 @@
+@import "mixins.scss";
+@import "typography.scss";
+@import "colors.scss";
+
+.underline-input {
+  position: relative;
+
+  input[type] {
+    width: 100%;
+    border: none;
+    width: 100%;
+    padding: 7px 0px;
+    border-bottom: 2px solid $lt-gray;
+    color: $black;
+    -webkit-appearance: none;
+    border-radius: 0;
+    font: 16px/1em $roboto;
+    &::placeholder {
+      color: $lt-gray;
+    }
+    &:-webkit-autofill {
+      -webkit-box-shadow: 0 0 0px 1000px $white inset;
+      box-shadow: 0 0 0px 1000px $white inset;
+    }
+    &:global(.focus-visible) {
+      outline: none !important;
+    }
+  }
+  &.focus {
+    input[type] {
+      border-color: darken($lt-gray, 25%);
+      &::placeholder {
+        color: darken($lt-gray, 25%);
+      }
+    }
+    // &.error input[type] { border-color:  darken($bright-red, 15%); }
+  }
+  &.error input[type] {
+    border-color: $bright-red;
+  }
+  > div {
+    @include error-message;
+  }
+}

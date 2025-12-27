@@ -1,0 +1,558 @@
+@use "sass:math";
+@import "variables";
+@import "typography";
+@import "colors";
+
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+  &:after {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: math.div($height, $width) * 100%;
+  }
+  > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+@mixin fluid-type($properties, $min-vw, $max-vw, $min-value, $max-value) {
+  @each $property in $properties {
+    #{$property}: $min-value;
+  }
+
+  @media screen and (min-width: $min-vw) {
+    @each $property in $properties {
+      #{$property}: calc(
+        #{$min-value} +
+          #{strip-unit($max-value - $min-value)} *
+          (100vw - #{$min-vw}) /
+          #{strip-unit($max-vw - $min-vw)}
+      );
+    }
+  }
+
+  @media screen and (min-width: $max-vw) {
+    @each $property in $properties {
+      #{$property}: $max-value;
+    }
+  }
+}
+
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+@mixin font-size($fs-map) {
+  @each $fs-breakpoint, $fs-font-size in $fs-map {
+    @if $fs-breakpoint == null {
+      font-size: $fs-font-size;
+      line-height: $fs-font-size;
+    } @else {
+      @media screen and (min-width: $fs-breakpoint) {
+        font-size: $fs-font-size;
+        line-height: $fs-font-size;
+      }
+    }
+  }
+}
+
+@mixin font-size-extra-space($fs-map) {
+  @each $fs-breakpoint, $fs-font-size in $fs-map {
+    @if $fs-breakpoint == null {
+      font-size: $fs-font-size;
+      line-height: $fs-font-size * 1.25;
+    } @else {
+      @media screen and (min-width: $fs-breakpoint) {
+        font-size: $fs-font-size;
+        line-height: $fs-font-size * 1.25;
+      }
+    }
+  }
+}
+
+@mixin max-height($fs-map) {
+  @each $fs-breakpoint, $fs-max-height in $fs-map {
+    @if $fs-breakpoint == null {
+      max-height: $fs-max-height;
+    } @else {
+      @media screen and (min-width: $fs-breakpoint) {
+        max-height: $fs-max-height;
+      }
+    }
+  }
+}
+
+@mixin max-width($fs-map) {
+  @each $fs-breakpoint, $fs-max-width in $fs-map {
+    @if $fs-breakpoint == null {
+      max-width: $fs-max-width;
+    } @else {
+      @media screen and (min-width: $fs-breakpoint) {
+        max-width: $fs-max-width;
+      }
+    }
+  }
+}
+
+/* END LEGACY STYLES */
+
+@mixin fade() {
+  transition: visibility 400ms, opacity 400ms;
+
+  &.show {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &.hide {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@mixin slide($duration) {
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+
+  &.closed {
+    height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+@mixin transition($settings) {
+  -webkit-transition: $settings;
+  -moz-transition: $settings;
+  -o-transition: $settings;
+  transition: $settings;
+}
+
+@mixin transform($settings) {
+  -webkit-transform: $settings;
+  -moz-transform: $settings;
+  -o-transform: $settings;
+  transform: $settings;
+}
+
+/* MIXINS FOR MEDIA QUERIES */
+
+@mixin mobile-only {
+  @media screen and (max-width: #{$mobile-width-max}) {
+    @content;
+  }
+}
+
+@mixin mobile-and-tablet {
+  @media screen and (max-width: #{$tablet-width-max}) {
+    @content;
+  }
+}
+
+@mixin tablet-only {
+  @media screen and (min-width: #{$tablet-width-min}) and (max-width: #{$tablet-width-max}) {
+    @content;
+  }
+}
+
+@mixin tablet-portrait-only {
+  @media screen and (min-width: #{$tablet-width-min}) and (orientation: portrait) {
+    @content;
+  }
+}
+
+// DONT USE 'tablet-landscape-and-desktop' mixin, this is just to support legacy styles
+@mixin tablet-landscape-and-desktop {
+  @media screen and (min-width: #{$tablet-width-max}) {
+    @content;
+  }
+}
+
+@mixin tablet-and-desktop {
+  @media screen and (min-width: #{$tablet-width-min}) {
+    @content;
+  }
+}
+
+@mixin desktop-only {
+  @media screen and (min-width: #{$desktop-width-min}) {
+    @content;
+  }
+}
+
+@mixin ie-only {
+  @media screen and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    @content;
+  }
+}
+
+/* MIXINS FOR TYPOGRAPHY */
+@mixin global-font($mobile, $tablet, $desktop) {
+  font-family: $roboto;
+  color: $new-gray;
+  line-height: 1.4;
+  font-size: $mobile;
+  @include tablet-only {
+    font-size: $tablet;
+  }
+  @include desktop-only {
+    font-size: $desktop;
+  }
+}
+
+@mixin heading-font($mobile, $tablet, $desktop) {
+  font-family: $labgrotesque-black;
+  color: $new-gray;
+  line-height: 1.2;
+  letter-spacing: -0.25px;
+  font-size: $mobile;
+  @include tablet-only {
+    font-size: $tablet;
+  }
+  @include desktop-only {
+    font-size: $desktop;
+  }
+}
+
+@mixin paragraph-font($mobile, $tablet, $desktop) {
+  @include global-font($mobile, $tablet, $desktop);
+  word-break: break-word;
+}
+
+// Legacy heading
+@mixin heading-level-1($color: $new-gray) {
+  @include heading-font(42px, 48px, 66px);
+  color: $color;
+}
+
+@mixin heading-level-2($color: $new-gray) {
+  @include heading-font(36px, 42px, 60px);
+  color: $color;
+}
+
+@mixin heading-level-3($color: $new-gray) {
+  @include heading-font(28px, 36px, 44px);
+  color: $color;
+}
+
+@mixin heading-level-4($color: $new-gray) {
+  @include heading-font(24px, 28px, 36px);
+  color: $color;
+}
+
+@mixin heading-level-5($color: $new-gray) {
+  @include heading-font(18px, 24px, 24px);
+  color: $color;
+}
+
+@mixin heading-level-6($color: $new-gray) {
+  @include heading-font(16px, 18px, 18px);
+  color: $color;
+}
+
+@mixin paragraph-large($color: $new-gray) {
+  @include paragraph-font(16px, 18px, 24px);
+  @include sup-text(25px, 27px, 35px);
+  @include sup-text-top(5px, 5px, 5px);
+  color: $color;
+}
+
+@mixin paragraph-medium($color: $new-gray) {
+  @include paragraph-font(14px, 16px, 18px);
+  @include sup-text(20px, 25px, 29px);
+  @include sup-text-top(3px, 4px, 6px);
+  color: $color;
+}
+
+@mixin paragraph-small($color: $new-gray) {
+  @include paragraph-font(10px, 14px, 14px);
+  @include sup-text(20px, 25px, 26px);
+  @include sup-text-top(4px, 4px, 4px);
+  color: $color;
+}
+
+@mixin special-text($color: $footer-green) {
+  font-family: $roboto;
+  font-size: 14px;
+  line-height: 1.4;
+  color: $color;
+}
+
+@mixin blockquote($color: $black) {
+  @include heading-text(18px, 20px, 28px);
+  color: $color;
+  letter-spacing: 0;
+  line-height: 1.4;
+  border-left: 3px solid $footer-green;
+  padding-left: 22px;
+}
+
+@mixin legal($color: $new-gray) {
+  @include global-font(8px, 10px, 10px);
+  color: $color;
+}
+
+@mixin error-message($color: $bright-red) {
+  @include global-font(12px, 12px, 14px);
+  color: $color;
+  padding: 5px 0px;
+}
+
+@mixin inner($left: true, $wrapper: true, $right: true) {
+  @if $wrapper {
+    max-width: $global-max-width;
+    margin: 0 auto;
+    width: 100%;
+  }
+  @if $left {
+    padding-left: 15px;
+  }
+  @if $right {
+    padding-right: 15px;
+  }
+  @include tablet-only {
+    @if $left {
+      padding-left: 30px;
+    }
+    @if $right {
+      padding-right: 30px;
+    }
+  }
+  @include desktop-only() {
+    @if $left {
+      padding-left: 40px;
+    }
+    @if $right {
+      padding-right: 40px;
+    }
+  }
+}
+
+/* REDESIGN 2.0 MIXINS FOR TYPOGRAPHY */
+@mixin sup-text($mobile, $tablet, $desktop) {
+  sup {
+    font-family: $proximanova-semibold;
+    font-size: $mobile;
+    @include tablet-only {
+      font-size: $tablet;
+    }
+    @include desktop-only {
+      font-size: $desktop;
+    }
+  }
+}
+@mixin sup-text-top($mobile, $tablet, $desktop) {
+  sup {
+    top: $mobile;
+    @include tablet-only {
+      top: $tablet;
+    }
+    @include desktop-only {
+      top: $desktop;
+    }
+  }
+}
+
+@mixin heading-text($mobile, $tablet, $desktop) {
+  font-family: $right-grotesk-dark;
+  line-height: 1.2;
+  font-size: $mobile;
+  @include tablet-only {
+    font-size: $tablet;
+  }
+  @include desktop-only {
+    font-size: $desktop;
+  }
+}
+
+@mixin heading-1($color: $black) {
+  @include heading-text(42px, 44px, 90px);
+  @include sup-text(24px, 25px, 46px);
+  @include sup-text-top(-13px, -13px, -32px);
+  line-height: 1em;
+  color: $color;
+}
+
+@mixin heading-2($color: $black) {
+  @include heading-text(36px, 38px, 75px);
+  @include sup-text(24px, 25px, 30px);
+  @include sup-text-top(-9px, -9px, -30px);
+  color: $color;
+}
+
+@mixin heading-3($color: $black) {
+  @include heading-text(28px, 30px, 60px);
+  @include sup-text(19px, 22px, 27px);
+  @include sup-text-top(-6px, -6px, -23px);
+  color: $color;
+}
+
+@mixin heading-4($color: $black) {
+  @include heading-text(24px, 26px, 45px);
+  @include sup-text(19px, 20px, 23px);
+  @include sup-text-top(-4px, -3px, -16px);
+  color: $color;
+}
+
+@mixin heading-5($color: $black) {
+  @include heading-text(18px, 20px, 28px);
+  @include sup-text(17px, 18px, 23px);
+  @include sup-text-top(-1px, -2px, -3px);
+  color: $color;
+}
+
+@mixin heading-6($color: $black) {
+  @include heading-text(16px, 17px, 24px);
+  @include sup-text(17px, 16px, 23px);
+  @include sup-text-top(1px, -1px, -1px);
+  color: $color;
+}
+
+@mixin supHeading($color: $black) {
+  @include heading-text(16px, 17px, 24px);
+  color: $color;
+  display: block;
+}
+
+@mixin main-nav($color: $black) {
+  @include heading-text(14px, 16px, 26px);
+  color: $color;
+}
+
+@mixin placeholder($mobile, $tablet, $desktop) {
+  $color: $lt-gray;
+  font-family: $right-grotesk-dark;
+  font-size: $mobile;
+  @include tablet-only {
+    font-size: $tablet;
+  }
+  @include desktop-only {
+    font-size: $desktop;
+  }
+}
+
+@mixin footer-text($color: $white) {
+  @include heading-text(14px, 14px, 14px);
+  color: $color;
+}
+
+@mixin product-copy($color: $black) {
+  @include heading-text(15px, 16px, 18px);
+  color: $color;
+}
+
+/* ANIMATIONS  */
+@keyframes animate-float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes zoom-out {
+  0% {
+    transform: scale(0, 0);
+  }
+  50% {
+    transform: scale(1.5, 1.5);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes rotate-down {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes rotate-up {
+  0% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes dropdown-animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translate(0, 100%);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes slide-down {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, 100%);
+  }
+}
+
+@keyframes slide-left {
+  0% {
+    transform: translate(100%, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes slide-right {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(100%, 0);
+  }
+}
+
+@mixin animate-float($anim-time, $delay-time) {
+  animation: animate-float #{$anim-time}s #{$delay-time}s infinite linear;
+}

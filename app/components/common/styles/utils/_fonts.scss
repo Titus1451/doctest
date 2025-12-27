@@ -1,0 +1,404 @@
+@font-face {
+  font-family: "RightGrotesk-Bold";
+  font-display: swap;
+  src: url("/assets/fonts/RightGrotesk-Bold.eot");
+  src: url("/assets/fonts/RightGrotesk-Bold.eot?#iefix") format("embedded-opentype"),
+    url("/assets/fonts/RightGrotesk-Bold.woff2") format("woff2"),
+    url("/assets/fonts/RightGrotesk-Bold.woff") format("woff"),
+    url("/assets/fonts/RightGrotesk-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "RightGrotesk-CompactDark";
+  font-display: swap;
+  src: url("/assets/fonts/RightGrotesk-CompactDark.eot");
+  src: url("/assets/fonts/RightGrotesk-CompactDark.eot?#iefix") format("embedded-opentype"),
+    url("/assets/fonts/RightGrotesk-CompactDark.woff2") format("woff2"),
+    url("/assets/fonts/RightGrotesk-CompactDark.woff") format("woff"),
+    url("/assets/fonts/RightGrotesk-CompactDark.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "LabGrotesque-Black";
+  font-display: swap;
+  src: url("/assets/fonts/LabGrotesque-Black.eot");
+  src: url("/assets/fonts/LabGrotesque-Black.eot?#iefix") format("embedded-opentype"),
+    url("/assets/fonts/LabGrotesque-Black.woff2") format("woff2"),
+    url("/assets/fonts/LabGrotesque-Black.woff") format("woff");
+}
+
+/* @import must be at top of file, otherwise CSS will not work */
+
+/* @import url("//hello.myfonts.net/count/366628");
+@font-face {
+  font-family: "HelveticaNeueLTStd-Lt";
+  font-display: swap;
+  src: url("/assets/fonts/366628_0_0.eot");
+  src: url("/assets/fonts/366628_0_0.eot?#iefix") format("embedded-opentype"),
+    url("/assets/fonts/366628_0_0.woff2") format("woff2"),
+    url("/assets/fonts/366628_0_0.woff") format("woff"),
+    url("/assets/fonts/366628_0_0.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "HelveticaNeueLTStd-Bd";
+  font-display: swap;
+  src: url("/assets/fonts/366628_1_0.eot");
+  src: url("/assets/fonts/366628_1_0.eot?#iefix") format("embedded-opentype"),
+    url("/assets/fonts/366628_1_0.woff2") format("woff2"),
+    url("/assets/fonts/366628_1_0.woff") format("woff"),
+    url("/assets/fonts/366628_1_0.ttf") format("truetype");
+} */
+
+@font-face {
+  font-family: "HelveticaNeueLTStd-Roman";
+  font-display: swap;
+  src: url("/assets/fonts/366628_2_0.eot");
+  src: url("/assets/fonts/366628_2_0.eot?#iefix") format("embedded-opentype"),
+    url("/assets/fonts/366628_2_0.woff2") format("woff2"),
+    url("/assets/fonts/366628_2_0.woff") format("woff"),
+    url("/assets/fonts/366628_2_0.ttf") format("truetype");
+}
+
+/* @font-face {
+  font-family: "TrasandinaMedium";
+  font-display: swap;
+  src: url("/assets/fonts/366628_6_0.eot");
+  src: url("/assets/fonts/366628_6_0.eot?#iefix") format("embedded-opentype"),
+    url("/assets/fonts/366628_6_0.woff2") format("woff2"),
+    url("/assets/fonts/366628_6_0.woff") format("woff"),
+    url("/assets/fonts/366628_6_0.ttf") format("truetype");
+} */
+
+@font-face {
+  font-family: "TrasandinaRegular";
+  font-display: swap;
+  src: url("/assets/fonts/366628_7_0.eot");
+  src: url("/assets/fonts/366628_7_0.eot?#iefix") format("embedded-opentype"),
+    url("/assets/fonts/366628_7_0.woff2") format("woff2"),
+    url("/assets/fonts/366628_7_0.woff") format("woff"),
+    url("/assets/fonts/366628_7_0.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "TrasandinaUltra";
+  font-display: swap;
+  src: url("/assets/fonts/366628_8_0.eot");
+  src: url("/assets/fonts/366628_8_0.eot?#iefix") format("embedded-opentype"),
+    url("/assets/fonts/366628_8_0.woff2") format("woff2"),
+    url("/assets/fonts/366628_8_0.woff") format("woff"),
+    url("/assets/fonts/366628_8_0.ttf") format("truetype");
+}
+
+/* @font-face {
+  font-family: "TrasandinaBlack";
+  font-display: swap;
+  src: url("/assets/fonts/366628_9_0.eot");
+  src: url("/assets/fonts/366628_9_0.eot?#iefix") format("embedded-opentype"),
+    url("/assets/fonts/366628_9_0.woff2") format("woff2"),
+    url("/assets/fonts/366628_9_0.woff") format("woff"),
+    url("/assets/fonts/366628_9_0.ttf") format("truetype");
+} */
+
+@font-face {
+  // Used directly in RewardsGraph
+  font-family: "TrasandinaBold";
+  font-display: swap;
+  src: url("/assets/fonts/366628_A_0.eot");
+  src: url("/assets/fonts/366628_A_0.eot?#iefix") format("embedded-opentype"),
+    url("/assets/fonts/366628_A_0.woff2") format("woff2"),
+    url("/assets/fonts/366628_A_0.woff") format("woff"),
+    url("/assets/fonts/366628_A_0.ttf") format("truetype");
+}
+
+/**
+ * Heebo
+ * Source: Google Fonts
+ * License: Open Font License
+ */
+
+@font-face {
+  font-family: "Heebo-Regular";
+  font-display: swap;
+  src: url("/assets/fonts/Heebo-Regular.eot");
+  src: local("☺"), url("/assets/fonts/Heebo-Regular.woff") format("woff"),
+    url("/assets/fonts/Heebo-Regular.ttf") format("truetype"),
+    url("/assets/fonts/Heebo-Regular.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Heebo-Medium";
+  font-display: swap;
+  src: url("/assets/fonts/Heebo-Medium.eot");
+  src: local("☺"), url("/assets/fonts/Heebo-Medium.woff") format("woff"),
+    url("/assets/fonts/Heebo-Medium.ttf") format("truetype"),
+    url("/assets/fonts/Heebo-Medium.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* @font-face {
+  font-family: "Heebo-Bold";
+  font-display: swap;
+  src: url("/assets/fonts/Heebo-Bold.eot");
+  src: local("☺"), url("/assets/fonts/Heebo-Bold.woff") format("woff"),
+    url("/assets/fonts/Heebo-Bold.ttf") format("truetype"),
+    url("/assets/fonts/Heebo-Bold.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+} */
+
+/* @import must be at top of file, otherwise CSS will not work
+ * NOTE: the proximanova fonts are being phased out from the site
+ * remove these definitions when complete
+ */
+
+@font-face {
+  font-family: "ProximaNova-Semibold";
+  font-display: swap;
+  src: url("/assets/fonts/37126D_1_0.eot");
+  src: url("/assets/fonts/37126D_1_0.eot?#iefix") format("embedded-opentype"),
+    url("/assets/fonts/37126D_1_0.woff2") format("woff2"),
+    url("/assets/fonts/37126D_1_0.woff") format("woff"),
+    url("/assets/fonts/37126D_1_0.ttf") format("truetype");
+}
+
+// License Information
+
+/**
+ * @license
+ * MyFonts Webfont Build ID 3565096, 2018-04-23T01:00:01-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: HelveticaNeueLTStd-Lt by Linotype
+ * URL: https://www.myfonts.com/fonts/linotype/neue-helvetica/std-37-thin-condensed-189171/
+ * Copyright: Copyright &#x00A9; 1988, 1990, 1993, 2002 Adobe Systems Incorporated.  All Rights Reserved. &#x00A9; 1981, 2002 Heidelberger Druckmaschinen AG. All rights reserved.
+ * Licensed pageviews: 50,000,000
+ * 
+ * Webfont: HelveticaNeueLTStd-Bd by Linotype
+ * URL: https://www.myfonts.com/fonts/linotype/neue-helvetica/std-75-bold-189171/
+ * Copyright: Copyright &#x00A9; 1988, 1990, 1993, 2002 Adobe Systems Incorporated.  All Rights Reserved. &#x00A9; 1981, 2002 Heidelberger Druckmaschinen AG. All rights reserved.
+ * Licensed pageviews: 50,000,000
+ * 
+ * Webfont: HelveticaNeueLTStd-Roman by Linotype
+ * URL: https://www.myfonts.com/fonts/linotype/neue-helvetica/std-55-roman-189171/
+ * Copyright: Copyright &#x00A9; 1988, 1990, 1993, 2002 Adobe Systems Incorporated.  All Rights Reserved. &#x00A9; 1981, 2002 Heidelberger Druckmaschinen AG. All rights reserved.
+ * Licensed pageviews: 50,000,000
+ * 
+ * Webfont: HelveticaNeueLTStd-Md by Linotype
+ * URL: https://www.myfonts.com/fonts/linotype/neue-helvetica/std-65-medium-189171/
+ * Copyright: Copyright &#x00A9; 1988, 1990, 1993, 2002 Adobe Systems Incorporated.  All Rights Reserved. &#x00A9; 1981, 2002 Heidelberger Druckmaschinen AG. All rights reserved.
+ * Licensed pageviews: 50,000,000
+ * 
+ * Webfont: HelveticaNeueLTStd-BlkCn by Linotype
+ * URL: https://www.myfonts.com/fonts/linotype/neue-helvetica/std-97-black-condensed-189171/
+ * Copyright: Copyright &#x00A9; 1990, 2002 Adobe Systems Incorporated.  All Rights Reserved. &#x00A9; 1981, 2002 Heidelberger Druckmaschinen AG. All rights reserved.
+ * Licensed pageviews: 50,000,000
+ * 
+ * Webfont: HelveticaNeueLTStd-BdCn by Linotype
+ * URL: https://www.myfonts.com/fonts/linotype/neue-helvetica/std-77-bold-condensed-189171/
+ * Copyright: Copyright &#x00A9; 1990, 2002 Adobe Systems Incorporated.  All Rights Reserved. &#x00A9; 1981, 2002 Heidelberger Druckmaschinen AG. All rights reserved.
+ * Licensed pageviews: 27,500,000
+ * 
+ * Webfont: TrasandinaMedium by TipoType
+ * URL: https://www.myfonts.com/fonts/tipotype/trasandina/medium/
+ * Copyright: Copyright (c) 2015 by Fernando Diaz. All rights reserved.
+ * Licensed pageviews: 7,500,000
+ * 
+ * Webfont: TrasandinaRegular by TipoType
+ * URL: https://www.myfonts.com/fonts/tipotype/trasandina/regular/
+ * Copyright: Copyright (c) 2015 by Fernando Diaz. All rights reserved.
+ * Licensed pageviews: 7,500,000
+ * 
+ * Webfont: TrasandinaUltra by TipoType
+ * URL: https://www.myfonts.com/fonts/tipotype/trasandina/ultra/
+ * Copyright: Copyright (c) 2015 by Fernando Diaz. All rights reserved.
+ * Licensed pageviews: 7,500,000
+ * 
+ * Webfont: TrasandinaBlack by TipoType
+ * URL: https://www.myfonts.com/fonts/tipotype/trasandina/black/
+ * Copyright: Copyright (c) 2015 by Fernando Diaz. All rights reserved.
+ * Licensed pageviews: 7,500,000
+ * 
+ * Webfont: TrasandinaBold by TipoType
+ * URL: https://www.myfonts.com/fonts/tipotype/trasandina/bold/
+ * Copyright: Copyright (c) 2015 by Fernando Diaz. All rights reserved.
+ * Licensed pageviews: 7,500,000
+ * 
+ * 
+ * License: https://www.myfonts.com/viewlicense?type=web&buildid=3565096
+ * 
+ * © 2018 MyFonts Inc
+*/
+
+/**
+ * @license
+ * MyFonts Webfont Build ID 3563930, 2018-04-20T13:16:28-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed webfont(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: MuseoSans-700 by exljbris
+ * URL: https://www.myfonts.com/fonts/exljbris/museo-sans/700/
+ * Copyright: Copyright (c) 2008 by Jos Buivenga. All rights reserved.
+ * 
+ * Webfont: MuseoSans-300 by exljbris
+ * URL: https://www.myfonts.com/fonts/exljbris/museo-sans/300/
+ * Copyright: Copyright (c) 2008 by Jos Buivenga. All rights reserved.
+ * 
+ * Webfont: MuseoSans-900Italic by exljbris
+ * URL: https://www.myfonts.com/fonts/exljbris/museo-sans/900-italic/
+ * Copyright: Copyright (c) 2008 by Jos Buivenga. All rights reserved.
+ * 
+ * Webfont: MuseoSans-500 by exljbris
+ * URL: https://www.myfonts.com/fonts/exljbris/museo-sans/500/
+ * Copyright: Copyright (c) 2008 by Jos Buivenga. All rights reserved.
+ * 
+ * Webfont: MuseoSans-100 by exljbris
+ * URL: https://www.myfonts.com/fonts/exljbris/museo-sans/100/
+ * Copyright: Copyright (c) 2008 by Jos Buivenga. All rights reserved.
+ * 
+ * Webfont: MuseoSans-700Italic by exljbris
+ * URL: https://www.myfonts.com/fonts/exljbris/museo-sans/700-italic/
+ * Copyright: Copyright (c) 2008 by Jos Buivenga. All rights reserved.
+ * 
+ * Webfont: MuseoSans-300Italic by exljbris
+ * URL: https://www.myfonts.com/fonts/exljbris/museo-sans/300-italic/
+ * Copyright: Copyright (c) 2008 by Jos Buivenga. All rights reserved.
+ * 
+ * Webfont: MuseoSans-100Italic by exljbris
+ * URL: https://www.myfonts.com/fonts/exljbris/museo-sans/100-italic/
+ * Copyright: Copyright (c) 2008 by Jos Buivenga. All rights reserved.
+ * 
+ * Webfont: MuseoSans-500Italic by exljbris
+ * URL: https://www.myfonts.com/fonts/exljbris/museo-sans/500-italic/
+ * Copyright: Copyright (c) 2008 by Jos Buivenga. All rights reserved.
+ * 
+ * Webfont: MuseoSans-900 by exljbris
+ * URL: https://www.myfonts.com/fonts/exljbris/museo-sans/900/
+ * Copyright: Copyright (c) 2008 by Jos Buivenga. All rights reserved.
+ * 
+ * Webfont: Sucrose-Regular by Yellow Design Studio
+ * URL: https://www.myfonts.com/fonts/yellow-design/sucrose/regular/
+ * Copyright: Copyright (c) 2015 by Yellow Design Studio. All rights reserved.
+ * 
+ * Webfont: Sucrose-Bold by Yellow Design Studio
+ * URL: https://www.myfonts.com/fonts/yellow-design/sucrose/bold/
+ * Copyright: Copyright (c) 2015 by Yellow Design Studio. All rights reserved.
+ * 
+ * Webfont: Sucrose-BoldOne by Yellow Design Studio
+ * URL: https://www.myfonts.com/fonts/yellow-design/sucrose/bold-one/
+ * Copyright: Copyright (c) 2015 by Yellow Design Studio. All rights reserved.
+ * 
+ * Webfont: Sucrose-BoldThree by Yellow Design Studio
+ * URL: https://www.myfonts.com/fonts/yellow-design/sucrose/bold-three/
+ * Copyright: Copyright (c) 2015 by Yellow Design Studio. All rights reserved.
+ * 
+ * Webfont: Sucrose-One by Yellow Design Studio
+ * URL: https://www.myfonts.com/fonts/yellow-design/sucrose/one/
+ * Copyright: Copyright (c) 2015 by Yellow Design Studio. All rights reserved.
+ * 
+ * Webfont: Sucrose-BoldFour by Yellow Design Studio
+ * URL: https://www.myfonts.com/fonts/yellow-design/sucrose/bold-four/
+ * Copyright: Copyright (c) 2015 by Yellow Design Studio. All rights reserved.
+ * 
+ * Webfont: SucroseSlant-Regular by Yellow Design Studio
+ * URL: https://www.myfonts.com/fonts/yellow-design/sucrose/slant-regular/
+ * Copyright: Copyright (c) 2015 by Yellow Design Studio. All rights reserved.
+ * 
+ * Webfont: Sucrose-Four by Yellow Design Studio
+ * URL: https://www.myfonts.com/fonts/yellow-design/sucrose/four/
+ * Copyright: Copyright (c) 2015 by Yellow Design Studio. All rights reserved.
+ * 
+ * Webfont: SucroseSlant-Bold by Yellow Design Studio
+ * URL: https://www.myfonts.com/fonts/yellow-design/sucrose/slant-bold/
+ * Copyright: Copyright (c) 2015 by Yellow Design Studio. All rights reserved.
+ * 
+ * Webfont: SucroseSlant-BoldTwo by Yellow Design Studio
+ * URL: https://www.myfonts.com/fonts/yellow-design/sucrose/slant-bold-two/
+ * Copyright: Copyright (c) 2015 by Yellow Design Studio. All rights reserved.
+ * 
+ * Webfont: SucroseSlant-BoldThree by Yellow Design Studio
+ * URL: https://www.myfonts.com/fonts/yellow-design/sucrose/slant-bold-three/
+ * Copyright: Copyright (c) 2015 by Yellow Design Studio. All rights reserved.
+ * 
+ * Webfont: SucroseSlant-BoldOne by Yellow Design Studio
+ * URL: https://www.myfonts.com/fonts/yellow-design/sucrose/slant-bold-one/
+ * Copyright: Copyright (c) 2015 by Yellow Design Studio. All rights reserved.
+ * 
+ * Webfont: SucroseSlant-Four by Yellow Design Studio
+ * URL: https://www.myfonts.com/fonts/yellow-design/sucrose/slant-four/
+ * Copyright: Copyright (c) 2015 by Yellow Design Studio. All rights reserved.
+ * 
+ * Webfont: SucroseSlant-One by Yellow Design Studio
+ * URL: https://www.myfonts.com/fonts/yellow-design/sucrose/slant-one/
+ * Copyright: Copyright (c) 2015 by Yellow Design Studio. All rights reserved.
+ * 
+ * Webfont: SucroseSlant-Three by Yellow Design Studio
+ * URL: https://www.myfonts.com/fonts/yellow-design/sucrose/slant-three/
+ * Copyright: Copyright (c) 2015 by Yellow Design Studio. All rights reserved.
+ * 
+ * Webfont: SucroseSlant-Two by Yellow Design Studio
+ * URL: https://www.myfonts.com/fonts/yellow-design/sucrose/slant-two/
+ * Copyright: Copyright (c) 2015 by Yellow Design Studio. All rights reserved.
+ * 
+ * Webfont: SucroseSlant-BoldFour by Yellow Design Studio
+ * URL: https://www.myfonts.com/fonts/yellow-design/sucrose/slant-bold-four/
+ * Copyright: Copyright (c) 2015 by Yellow Design Studio. All rights reserved.
+ * 
+ * Webfont: Sucrose-Two by Yellow Design Studio
+ * URL: https://www.myfonts.com/fonts/yellow-design/sucrose/two/
+ * Copyright: Copyright (c) 2015 by Yellow Design Studio. All rights reserved.
+ * 
+ * Webfont: Sucrose-Three by Yellow Design Studio
+ * URL: https://www.myfonts.com/fonts/yellow-design/sucrose/three/
+ * Copyright: Copyright (c) 2015 by Yellow Design Studio. All rights reserved.
+ * 
+ * 
+ * License: https://www.myfonts.com/viewlicense?type=web&buildid=3563930
+ * Licensed pageviews: 5,000,000
+ * 
+ * © 2018 MyFonts Inc
+*/
+
+// @import url("//fonts.googleapis.com/css?family=Montserrat:400,700&display=swap");
+
+/**
+ * @license
+ * MyFonts Webfont Build ID 3609197, 2018-07-11T12:09:03-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: ProximaNova-Regular by Mark Simonson
+ * URL: https://www.myfonts.com/fonts/marksimonson/proxima-nova/regular/
+ * 
+ * Webfont: ProximaNova-Semibold by Mark Simonson
+ * URL: https://www.myfonts.com/fonts/marksimonson/proxima-nova/semibold/
+ * 
+ * Webfont: ProximaNovaCond-Semibold by Mark Simonson
+ * URL: https://www.myfonts.com/fonts/marksimonson/proxima-nova/cond-semibold/
+ * 
+ * Webfont: ProximaNovaExCn-Black by Mark Simonson
+ * URL: https://www.myfonts.com/fonts/marksimonson/proxima-nova/ex-cn-black/
+ * 
+ * 
+ * License: https://www.myfonts.com/viewlicense?type=web&buildid=3609197
+ * Licensed pageviews: 15,000,000
+ * Webfonts copyright: Copyright (c) Mark Simonson, 2005. All rights reserved.
+ * 
+ * © 2018 MyFonts Inc
+*/

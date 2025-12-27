@@ -1,0 +1,280 @@
+@import "colors.scss";
+@import "mixins.scss";
+@import "sprites.scss";
+@import "typography.scss";
+
+button {
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.se-btn {
+  display: inline-block;
+  border-radius: 25px;
+  background-color: $se-green;
+  border: 2px solid $se-green;
+  color: $white;
+  min-height: 36px;
+  min-width: 170px;
+  font: 900 16px/40px $right-grotesk-bold;
+  text-align: center;
+  padding: 0 40px 0 40px;
+
+  &:hover,
+  &:focus {
+    color: $white;
+    text-decoration: none;
+    background-color: darken($se-green, 15%);
+    border: 2px solid darken($se-green, 15%);
+  }
+
+  &.se-btn-alt {
+    color: $se-green;
+    background-color: transparent;
+  }
+
+  &.se-btn-outline {
+    background-color: transparent;
+    color: $se-green;
+
+    &:hover,
+    &:focus {
+      background-color: transparent;
+      color: darken($se-green, 15%);
+      border: 2px solid darken($se-green, 15%);
+    }
+
+    &.se-btn-white {
+      color: $white;
+      background-color: transparent;
+      border: 2px solid $white;
+
+      &:hover,
+      &:focus {
+        background-color: transparent;
+        color: darken($white, 15%);
+        border: 2px solid darken($white, 15%);
+      }
+    }
+
+    &.se-btn-grey {
+      color: $new-gray;
+      background-color: transparent;
+      border: 2px solid $new-gray;
+
+      &:hover,
+      &:focus {
+        background-color: transparent;
+        color: darken($new-gray, 15%);
+        border: 2px solid darken($new-gray, 15%);
+      }
+    }
+  }
+
+  &.se-btn-white {
+    background-color: $white;
+    color: $se-green;
+    border: 2px solid $white;
+
+    &.se-btn-alt {
+      color: $new-gray;
+      &:hover,
+      &:focus {
+        background-color: $white;
+        color: darken($new-gray, 15%);
+        border: 2px solid $white;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $white;
+      color: darken($se-green, 15%);
+      border: 2px solid $white;
+    }
+  }
+
+  /*
+  &.se-btn-disabled {
+    background-color: $inactive-gray;
+    border: 2px solid $inactive-gray;
+  
+    &:hover,
+    &:focus {
+      background-color: $inactive-gray;
+      border: 2px solid $inactive-gray;
+    }
+  }
+  */
+
+  &.se-btn-grey {
+    background-color: $md-gray;
+    border: 2px solid $md-gray;
+
+    &:hover,
+    &:focus {
+      background-color: darken($md-gray, 15%);
+      border: 2px solid darken($md-gray, 15%);
+    }
+  }
+
+  &.se-btn-purple {
+    background-color: $scampi;
+    border: 2px solid $scampi;
+
+    &:hover,
+    &:focus {
+      background-color: darken($scampi, 15%);
+      border: 2px solid darken($scampi, 15%);
+    }
+  }
+
+  &.se-btn-transparent {
+    background-color: transparent;
+    color: $se-green;
+
+    &:hover,
+    &:focus {
+      background-color: transparent;
+      color: darken($se-green, 15%);
+      border: 2px solid darken($se-green, 15%);
+    }
+
+    &.se-btn-white {
+      color: $white;
+      border: 2px solid darken($white, 15%);
+
+      &:hover,
+      &:focus {
+        color: darken($white, 15%);
+        border: 2px solid darken($white, 15%);
+      }
+    }
+    &.se-btn-transparent-white {
+      color: $white;
+    }
+    &.se-btn-transparent-black {
+      color: $black;
+    }
+  }
+
+  &.se-btn-opaque {
+    background-color: rgba(255, 255, 255, 0.4);
+    border: none;
+    min-height: 40px;
+
+    &:hover,
+    &:focus {
+      background-color: rgba(255, 255, 255, 0.6);
+      border: none;
+    }
+  }
+
+  &.se-btn-transparent {
+    border: none;
+
+    &:hover,
+    &:focus {
+      border: none;
+    }
+  }
+
+  &.se-btn-box {
+    background: $white;
+    color: $black;
+    border: 1px solid $black;
+    border-radius: 0px;
+
+    &:hover,
+    &:focus {
+      background-color: lighten($black, 97);
+    }
+  }
+
+  &.se-btn-text {
+    background-color: transparent;
+    border-radius: 0px;
+    border: none;
+    color: $black;
+    text-align: left;
+    padding: 0px;
+    min-width: auto;
+    min-height: auto;
+    &:hover,
+    &:focus {
+      color: lighten($black, 5);
+    }
+  }
+
+  &.se-btn-paragraphs {
+    width: 130px;
+    min-width: 0;
+    margin: 15px 0;
+    padding: 13px 20px;
+
+    @media only screen and (min-width: 768px) and (max-width: 800px) {
+      margin: 4px 0;
+    }
+    @media (min-width: 414px) {
+      min-width: 180px;
+      max-width: 260px;
+    }
+    @include mobile-only {
+      margin-left: 4px;
+      margin-right: 4px;
+      padding: 13px;
+    }
+  }
+
+  &.se-wide-btn {
+    width: 256px;
+
+    @include mobile-only {
+      max-width: 256px;
+      min-width: 256px;
+    }
+  }
+
+  &.se-btn-wide {
+    width: 100%;
+    @include mobile-only {
+      max-width: 100%;
+      min-width: 100%;
+      padding: 0 10px 0 10px;
+    }
+  }
+
+  &.se-btn-small {
+    min-height: 34px;
+    min-width: auto;
+    padding: 0 20px 0 20px;
+    font: 900 1em/2em $right-grotesk-dark;
+    @include tablet-only {
+      min-height: 34px;
+      font-size: 15px;
+      line-height: 2em;
+    }
+    @include desktop-only {
+      min-height: 34px;
+      font-size: 16px;
+      line-height: 2em;
+    }
+  }
+
+  // custom styling for <Button>s on Home page
+  &.se-btn-home {
+    clear: both;
+    letter-spacing: 1.2px;
+    transition: 0.2s;
+    padding: 13px 35px;
+    min-width: 176px;
+  }
+
+  &:not(:last-of-type) {
+    margin-right: 8px;
+    @include mobile-only {
+      margin-right: 4px;
+    }
+  }
+}

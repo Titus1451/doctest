@@ -1,0 +1,246 @@
+@import "mixins.scss";
+@import "typography.scss";
+@import "colors.scss";
+
+@mixin label {
+  font-size: 13px;
+  color: $black;
+  margin: 0px;
+  width: calc(100% - 26px);
+  display: block;
+  float: left;
+  line-height: 1.6em;
+  padding-top: 2px;
+  font-family: $roboto;
+  a {
+    text-decoration: underline;
+  }
+}
+
+@mixin error {
+  label {
+    &,
+    a {
+      color: $bright-red;
+    }
+  }
+}
+
+.input-radio {
+  margin: 10px;
+  margin-left: 0px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  > div {
+    display: block;
+    margin: 5px;
+    margin-right: 10px;
+    position: relative;
+    float: left;
+    > div {
+      display: block;
+      height: 26px;
+      width: 26px;
+      cursor: pointer;
+      color: $md-green;
+      background-color: $ltr-gray;
+      border-radius: 100%;
+      text-indent: -9999px;
+
+      &:after {
+        content: "";
+        display: none;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 70%;
+        height: 70%;
+        background: $red;
+        border-radius: 100%;
+        background-color: $md-green;
+      }
+      svg {
+        display: none;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 16px;
+      }
+    }
+    input {
+      margin-right: 15px;
+      z-index: 100;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0px;
+      opacity: 0.01;
+      left: 0px;
+      margin: 0px;
+      &:checked ~ div {
+        > svg {
+          display: block;
+        }
+        &:after {
+          display: block;
+        }
+      }
+      &:global(.focus-visible):focus ~ div {
+        box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 82%);
+        outline-color: $blue;
+        outline-style: auto;
+        outline-width: 5px;
+      }
+    }
+  }
+
+  label {
+    @include label;
+  }
+  &.error {
+    @include error;
+  }
+}
+
+.input-checkbox {
+  margin: 10px;
+  margin-left: 0px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  > div {
+    display: block;
+    margin-right: 15px;
+    position: relative;
+    float: left;
+    > div {
+      display: block;
+      height: 26px;
+      width: 26px;
+      cursor: pointer;
+      color: $md-green;
+      background-color: $ltr-gray;
+      text-indent: -9999px;
+      svg {
+        display: none;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 16px;
+      }
+    }
+    input {
+      margin-right: 15px;
+      z-index: 100;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0px;
+      opacity: 0.01;
+      left: 0px;
+      margin: 0px;
+      &:checked ~ div {
+        span {
+          > svg {
+            display: block;
+          }
+          &:after {
+            display: block;
+          }
+        }
+      }
+      &:global(.focus-visible):focus ~ div {
+        box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 82%);
+        outline-color: $blue;
+        outline-style: auto;
+        outline-width: 5px;
+      }
+    }
+  }
+
+  label {
+    @include label;
+  }
+  &.error {
+    @include error;
+  }
+}
+
+.input-box {
+  flex-grow: 1;
+  display: inline-block;
+  padding: 10px;
+  margin: 5px;
+  text-align: center;
+  position: relative;
+  > div {
+    > div {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      right: 0px;
+      bottom: 0px;
+      background-color: $white;
+      color: $black;
+      border: 1px solid $black;
+      > span {
+        transform: translate(-50%, -50%);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        z-index: 10;
+        padding: 5px;
+        display: block;
+      }
+      > svg {
+        display: none;
+      }
+    }
+    input {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0px;
+      right: 0px;
+      top: 0px;
+      bottom: 0px;
+      z-index: 10;
+      opacity: 0.01;
+      z-index: 15;
+      &:checked ~ div {
+        color: $white;
+        background-color: $md-green;
+        border-color: $md-green;
+      }
+      &:global(.focus-visible):focus ~ div {
+        box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 82%);
+        outline-color: $blue;
+        outline-style: auto;
+        outline-width: 5px;
+      }
+    }
+  }
+
+  label {
+    margin: 0px;
+    opacity: 0.01;
+    word-break: break-word;
+  }
+}

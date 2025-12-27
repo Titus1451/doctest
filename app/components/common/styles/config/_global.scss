@@ -1,0 +1,358 @@
+@import "colors.scss";
+@import "mixins.scss";
+@import "placeholders.scss";
+
+.dialog-off-canvas-main-canvas {
+  height: 100%;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+a {
+  &,
+  &:hover {
+    color: $se-green;
+  }
+}
+
+#page {
+  position: relative;
+  z-index: 10;
+  height: 100%;
+  @include mobile-only {
+    overflow-x: hidden;
+  }
+
+  #se-scrollable {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    padding-top: 57px;
+
+    @include mobile-only {
+      -webkit-overflow-scrolling: touch;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+
+    @include tablet-and-desktop {
+      padding-top: 102px;
+    }
+  }
+}
+
+body.se-app {
+  #page #se-scrollable {
+    padding-top: 0 !important;
+  }
+  #header,
+  #footer,
+  #androidAppBanner {
+    display: none !important;
+  }
+}
+
+body.notifications-active {
+  #page #se-scrollable {
+    @include mobile-only {
+      padding-top: 90px;
+    }
+  }
+}
+
+.se-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.se-column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+
+iframe[name="Trade Desk Tracking - Homepage"] {
+  position: absolute;
+  left: -9999px;
+}
+
+.blurred {
+  @include tablet-and-desktop {
+    -webkit-filter: blur(4px);
+    -moz-filter: blur(4px);
+    -o-filter: blur(4px);
+    -ms-filter: blur(4px);
+    filter: blur(4px);
+
+    -webkit-transition: -webkit-filter 0.5s ease;
+    -moz-transition: -moz-filter 0.5s ease;
+    -o-transition: -o-filter 0.5s ease;
+    -ms-transition: -ms-filter 0.5s ease;
+    transition: filter 0.5s ease;
+  }
+}
+
+.se-app .se-app-disabled {
+  display: none !important;
+}
+
+.path-user {
+  #se-scrollable {
+    padding: 57px 0 0;
+
+    &.has-notifications {
+      @include mobile-only {
+        padding: 90px 0 0;
+      }
+    }
+    @include tablet-and-desktop {
+      padding: 130px 40px 0 40px;
+    }
+
+    #content {
+      margin: 0 auto;
+      max-width: 1520px;
+      padding: 40px 40px 100px 40px;
+
+      @include tablet-and-desktop {
+        padding: 0 0 100px 0;
+      }
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      display: block;
+      border: 1px solid #ccc;
+      width: 100%;
+      max-width: 400px;
+      margin-bottom: 10px;
+    }
+
+    #edit-submit {
+      display: inline-block;
+      clear: both;
+      min-width: 280px;
+      height: 40px;
+      border-radius: 20px !important;
+      background-color: $footer-green;
+      font: 16px/36px $heebo;
+      color: $white;
+      text-transform: uppercase;
+      padding-top: 2px;
+    }
+  }
+}
+
+body {
+  font-family: $roboto;
+}
+
+.skip-link {
+  &.visually-hidden.focusable:focus {
+    position: absolute !important;
+  }
+  top: 0px;
+  left: 0px;
+  background: $white;
+  color: $new-gray;
+  padding: 10px;
+  z-index: 1000;
+  border: 1px solid $new-gray;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.js-focus-visible :focus:not(.focus-visible) {
+  outline: none;
+}
+
+.focus-visible {
+  &,
+  &:focus {
+    outline-style: auto;
+    outline: 5px auto -webkit-focus-ring-color !important;
+  }
+}
+
+.app-links a {
+  overflow: hidden;
+  &:focus {
+    outline: 1px dashed $md-green !important;
+  }
+}
+
+.se-page-inner {
+  position: relative;
+}
+
+#drupal-live-announce {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.se-hdr-title #se-hdr-img {
+  display: table;
+  //margin-top: 102px;
+}
+
+#se-full-bg {
+  display: none;
+}
+
+@include tablet-and-desktop {
+  body {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  #se-full-bg {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    .se-full-bg-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+}
+
+.modal {
+  .nutrition-facts {
+    .close {
+      padding-left: 12px;
+      width: auto;
+      background: none;
+    }
+  }
+  // Tile based layout
+  .se-flip-details {
+    border-radius: 5px;
+    color: $white;
+    margin: 0;
+    padding: 0;
+    // padding: 30px 10px 10px;
+    border: 6px solid $ltr-gray;
+    .tile-desc-head {
+      padding: 30px 15px 5px 15px;
+      @include heading-level-6($white);
+    }
+    .tile-desc-body {
+      padding: 0 15px 30px 15px;
+      p {
+        @include paragraph-medium($white);
+      }
+    }
+    .close {
+      color: $white;
+      text-shadow: none;
+      font-size: 25px;
+      padding: 10px;
+      margin-top: -5px;
+      text-align: right;
+      opacity: 1;
+      font-weight: normal;
+    }
+  }
+  &.show {
+    backdrop-filter: blur(4px);
+  }
+}
+
+#se-mq-768,
+#se-mq-1024,
+#se-mq-1200 {
+  display: none;
+}
+@include tablet-and-desktop {
+  #se-mq-320 {
+    display: none;
+  }
+  #se-mq-768 {
+    display: block;
+  }
+}
+@include tablet-landscape-and-desktop {
+  #se-mq-768 {
+    display: none;
+  }
+  #se-mq-1024 {
+    display: block;
+  }
+}
+@media (min-width: 1200px) {
+  #se-mq-1024 {
+    display: none;
+  }
+  #se-mq-1200 {
+    display: block;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+/**
+ * Hide elements visually, but keep them available for screen readers.
+ *
+ * Used for information required for screen reader users to understand and use
+ * the site where visual display is undesirable. Information provided in this
+ * manner should be kept concise, to avoid unnecessary burden on the user.
+ * "!important" is used to prevent unintentional overrides.
+ */
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+  height: 1px;
+  width: 1px;
+  word-wrap: normal;
+}
+
+/**
+ * The .focusable class extends the .visually-hidden class to allow
+ * the element to be focusable when navigated to via the keyboard.
+ */
+.visually-hidden.focusable:active,
+.visually-hidden.focusable:focus {
+  position: static !important;
+  clip: auto;
+  overflow: visible;
+  height: auto;
+  width: auto;
+}
+
+/**
+ * Hide visually and from screen readers, but maintain layout.
+ */
+.invisible {
+  visibility: hidden;
+}
+
+.hide {
+  display: none !important;
+}
+
+/*
+ * TODO/upgrade - moving this to global, but should have it in
+ * bootstrap already
+ */
+.clearfix {
+  @include clearfix;
+}

@@ -1,0 +1,278 @@
+@import "@/app/components/common/styles/utils/_colors.scss";
+@import "@/app/components/common/styles/utils/_mixins.scss";
+@import "@/app/components/common/styles/utils/_typography.scss";
+
+.se-button {
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: $right-grotesk-bold;
+  font-family: 14px;
+  letter-spacing: 0.39px;
+
+  @include tablet-only {
+    font-family: 16px;
+    line-height: 40px;
+  }
+  @include desktop-only {
+    font-family: 18px;
+    line-height: 40px;
+  }
+
+  > div {
+    display: flex;
+    align-items: center;
+  }
+
+  &:hover,
+  &:focus,
+  &.focus {
+    text-decoration: none;
+  }
+
+  > input,
+  > button {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    width: 100%;
+    background: none;
+    color: transparent;
+    border: none;
+  }
+
+  &.se-button-default {
+    background-color: $se-green;
+    color: $white;
+    &:hover,
+    &:focus,
+    &.focus {
+      background-color: $green-hover;
+    }
+  }
+
+  &.se-button-pill {
+    border: 3px solid transparent;
+    padding: 5px 20px;
+    border-radius: 25px;
+    @include tablet-only {
+      padding: 0 20px;
+      border-radius: 30px;
+    }
+    @include desktop-only {
+      padding: 0 30px;
+      border-radius: 30px;
+    }
+    &.icon-left {
+      padding-left: 15px;
+    }
+    &.icon-right {
+      padding-right: 15px;
+    }
+
+    &.se-button-pill-white {
+      background-color: $white;
+      color: $black;
+      &:hover,
+      &:focus {
+        background-color: $black;
+        color: $white;
+      }
+    }
+    &.se-button-pill-black {
+      background-color: $black;
+      color: $white;
+      &:hover,
+      &:focus,
+      &.focus {
+        background-color: lighten($black, 20%);
+        color: $white;
+      }
+    }
+    &.se-button-pill-white-green {
+      background-color: $white;
+      color: $se-green;
+      &:hover,
+      &:focus {
+        background-color: $se-green;
+        color: $white;
+      }
+    }
+  }
+
+  &.se-button-outline {
+    background-color: transparent;
+    border-color: $se-green;
+    color: $black;
+    &:hover,
+    &:focus,
+    &.focus {
+      background-color: $se-green;
+      color: $white;
+    }
+
+    &.se-button-outline-white {
+      border-color: $white;
+      color: $white;
+      &:hover,
+      &:focus,
+      &.focus {
+        background-color: $white;
+        color: $black;
+      }
+    }
+
+    &.se-button-outline-black {
+      border-color: $black;
+      color: $black;
+      &:hover,
+      &:focus,
+      &.focus {
+        background-color: $black;
+        color: $white;
+      }
+    }
+    &.se-button-outline-green {
+      border-color: $se-green;
+      color: $se-green;
+      &:hover,
+      &:focus,
+      &.focus {
+        background-color: $se-green;
+        color: $white;
+      }
+    }
+  }
+
+  &.se-button-box {
+    border: 1px solid $black;
+    background-color: $white;
+    color: $black;
+    padding: 10px 15px;
+    @include tablet-only {
+      padding: 0px 20px;
+    }
+    @include desktop-only {
+      padding: 5px 30px;
+    }
+
+    &:hover,
+    &:focus,
+    &.focus {
+      border-color: $black;
+      background-color: $black;
+      color: $white;
+    }
+  }
+
+  &.se-button-paddingless {
+    background-color: transparent;
+    line-height: 1em;
+    color: $black;
+    &:hover,
+    &:focus,
+    &.focus {
+      text-decoration: underline;
+    }
+
+    &.se-button-text-black-paddingless {
+      color: $black;
+    }
+    &.se-button-text-white-paddingless {
+      color: $white;
+    }
+    &.se-button-text-green-paddingless {
+      color: $se-green;
+    }
+    &.se-button-icons {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+
+  &.se-button-text {
+    color: $black;
+
+    &:hover,
+    &:focus,
+    &.focus {
+      text-decoration: underline;
+    }
+
+    &.se-button-text-white {
+      color: $white;
+      &:hover,
+      &:focus,
+      &.focus {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &.se-button-icons {
+    padding-left: 15px;
+    padding-right: 15px;
+    .icon {
+      position: relative;
+      width: 22px;
+      height: 22px;
+      display: inline-block;
+      line-height: 1em;
+      svg {
+        font-size: 22px;
+        width: 100%;
+        height: 100%;
+      }
+      &.icon-pre {
+        margin-right: 8px;
+      }
+      &.icon-post {
+        margin-left: 8px;
+      }
+    }
+  }
+
+  &.se-button-wide {
+    &,
+    &.se-button-icons {
+      width: 100%;
+      padding-right: 5px;
+      padding-left: 5px;
+    }
+  }
+}
+
+.se-button-orange {
+  background-color: theme('colors.custom-orange'); // Use Tailwind's color variable
+  color: $white;
+  font-size: 1.2rem;
+  padding: 12px 24px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  min-width: 150px;
+  height: 50px;
+  transition: background-color 0.3s ease, box-shadow 0.2s ease; // Apply shadow effect instead of scale
+
+  &:hover,
+  &:focus,
+  &.focus {
+    background-color: theme('colors.custom-orange-above'); // Darker shade for hover/focus
+    box-shadow: 0 0 10px rgba(244, 129, 31, 0.5); // Adds glow effect like default button
+    outline: none; // Remove default focus outline
+  }
+
+  &:active {
+    background-color: theme('colors.custom-orange');
+    box-shadow: 0 0 5px rgba(244, 129, 31, 0.8); // Smaller glow on click
+    transform: scale(0.98); // Slight press effect inside the button
+  }
+}

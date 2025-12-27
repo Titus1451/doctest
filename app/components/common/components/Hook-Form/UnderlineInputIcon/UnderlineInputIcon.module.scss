@@ -1,0 +1,59 @@
+@import "mixins.scss";
+@import "typography.scss";
+@import "colors.scss";
+
+.underline-input-icon {
+  position: relative;
+  :global {
+    button {
+      cursor: pointer;
+      background-color: transparent;
+      color: $md-gray;
+      font-size: 18px;
+      height: 33px;
+      width: 38px;
+      padding: 0px;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      &[data-focus-visible-added] {
+        outline: 5px auto -webkit-focus-ring-color !important;
+      }
+      > span {
+        display: block;
+        width: 100%;
+        height: 100%;
+        > svg {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+    .tool-tip {
+      @include paragraph-small($white);
+      background: $se-green;
+      position: absolute;
+      display: none;
+      padding: 8px;
+      z-index: 10;
+      top: 38px;
+      width: 100%;
+      &.tool-tip-active {
+        display: block;
+      }
+      &:before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 7px 8px 7px;
+        border-color: transparent transparent $se-green transparent;
+        right: 13px;
+        top: -8px;
+      }
+    }
+  }
+}

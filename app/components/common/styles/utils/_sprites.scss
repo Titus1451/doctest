@@ -1,0 +1,1703 @@
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+
+$caret-next-disabled-name: "caret-next-disabled";
+$caret-next-disabled-x: 32px;
+$caret-next-disabled-y: 340px;
+$caret-next-disabled-offset-x: -32px;
+$caret-next-disabled-offset-y: -340px;
+$caret-next-disabled-width: 26px;
+$caret-next-disabled-height: 32px;
+$caret-next-disabled-total-width: 487px;
+$caret-next-disabled-total-height: 450px;
+$caret-next-disabled-image: "/assets/img/sprite_2019-12-13-09-30.png";
+$caret-next-disabled: (
+  32px,
+  340px,
+  -32px,
+  -340px,
+  26px,
+  32px,
+  487px,
+  450px,
+  "/assets/img/sprite_2019-12-13-09-30.png",
+  "caret-next-disabled"
+);
+$caret-next-hover-name: "caret-next-hover";
+$caret-next-hover-x: 63px;
+$caret-next-hover-y: 340px;
+$caret-next-hover-offset-x: -63px;
+$caret-next-hover-offset-y: -340px;
+$caret-next-hover-width: 26px;
+$caret-next-hover-height: 32px;
+$caret-next-hover-total-width: 487px;
+$caret-next-hover-total-height: 450px;
+$caret-next-hover-image: "/assets/img/sprite_2019-12-13-09-30.png";
+$caret-next-hover: (
+  63px,
+  340px,
+  -63px,
+  -340px,
+  26px,
+  32px,
+  487px,
+  450px,
+  "/assets/img/sprite_2019-12-13-09-30.png",
+  "caret-next-hover"
+);
+$caret-next-name: "caret-next";
+$caret-next-x: 94px;
+$caret-next-y: 340px;
+$caret-next-offset-x: -94px;
+$caret-next-offset-y: -340px;
+$caret-next-width: 26px;
+$caret-next-height: 32px;
+$caret-next-total-width: 487px;
+$caret-next-total-height: 450px;
+$caret-next-image: "/assets/img/sprite_2019-12-13-09-30.png";
+$caret-next: (
+  94px,
+  340px,
+  -94px,
+  -340px,
+  26px,
+  32px,
+  487px,
+  450px,
+  "/assets/img/sprite_2019-12-13-09-30.png",
+  "caret-next"
+);
+$caret-prev-disabled-name: "caret-prev-disabled";
+$caret-prev-disabled-x: 125px;
+$caret-prev-disabled-y: 340px;
+$caret-prev-disabled-offset-x: -125px;
+$caret-prev-disabled-offset-y: -340px;
+$caret-prev-disabled-width: 26px;
+$caret-prev-disabled-height: 32px;
+$caret-prev-disabled-total-width: 487px;
+$caret-prev-disabled-total-height: 450px;
+$caret-prev-disabled-image: "/assets/img/sprite_2019-12-13-09-30.png";
+$caret-prev-disabled: (
+  125px,
+  340px,
+  -125px,
+  -340px,
+  26px,
+  32px,
+  487px,
+  450px,
+  "/assets/img/sprite_2019-12-13-09-30.png",
+  "caret-prev-disabled"
+);
+$caret-prev-hover-name: "caret-prev-hover";
+$caret-prev-hover-x: 156px;
+$caret-prev-hover-y: 340px;
+$caret-prev-hover-offset-x: -156px;
+$caret-prev-hover-offset-y: -340px;
+$caret-prev-hover-width: 26px;
+$caret-prev-hover-height: 32px;
+$caret-prev-hover-total-width: 487px;
+$caret-prev-hover-total-height: 450px;
+$caret-prev-hover-image: "/assets/img/sprite_2019-12-13-09-30.png";
+$caret-prev-hover: (
+  156px,
+  340px,
+  -156px,
+  -340px,
+  26px,
+  32px,
+  487px,
+  450px,
+  "/assets/img/sprite_2019-12-13-09-30.png",
+  "caret-prev-hover"
+);
+$caret-prev-name: "caret-prev";
+$caret-prev-x: 187px;
+$caret-prev-y: 340px;
+$caret-prev-offset-x: -187px;
+$caret-prev-offset-y: -340px;
+$caret-prev-width: 26px;
+$caret-prev-height: 32px;
+$caret-prev-total-width: 487px;
+$caret-prev-total-height: 450px;
+$caret-prev-image: "/assets/img/sprite_2019-12-13-09-30.png";
+$caret-prev: (
+  187px,
+  340px,
+  -187px,
+  -340px,
+  26px,
+  32px,
+  487px,
+  450px,
+  "/assets/img/sprite_2019-12-13-09-30.png",
+  "caret-prev"
+);
+$checkbox-checked-hover-sm-name: "checkbox-checked-hover-sm";
+$checkbox-checked-hover-sm-x: 473px;
+$checkbox-checked-hover-sm-y: 46px;
+$checkbox-checked-hover-sm-offset-x: -473px;
+$checkbox-checked-hover-sm-offset-y: -46px;
+$checkbox-checked-hover-sm-width: 14px;
+$checkbox-checked-hover-sm-height: 14px;
+$checkbox-checked-hover-sm-total-width: 487px;
+$checkbox-checked-hover-sm-total-height: 450px;
+$checkbox-checked-hover-sm-image: "/assets/img/sprite_2019-12-13-09-30.png";
+$checkbox-checked-hover-sm: (
+  473px,
+  46px,
+  -473px,
+  -46px,
+  14px,
+  14px,
+  487px,
+  450px,
+  "/assets/img/sprite_2019-12-13-09-30.png",
+  "checkbox-checked-hover-sm"
+);
+$checkbox-checked-hover-name: "checkbox-checked-hover";
+$checkbox-checked-hover-x: 428px;
+$checkbox-checked-hover-y: 0px;
+$checkbox-checked-hover-offset-x: -428px;
+$checkbox-checked-hover-offset-y: 0px;
+$checkbox-checked-hover-width: 22px;
+$checkbox-checked-hover-height: 22px;
+$checkbox-checked-hover-total-width: 487px;
+$checkbox-checked-hover-total-height: 450px;
+$checkbox-checked-hover-image: "/assets/img/sprite_2019-12-13-09-30.png";
+$checkbox-checked-hover: (
+  428px,
+  0px,
+  -428px,
+  0px,
+  22px,
+  22px,
+  487px,
+  450px,
+  "/assets/img/sprite_2019-12-13-09-30.png",
+  "checkbox-checked-hover"
+);
+$checkbox-checked-sm-name: "checkbox-checked-sm";
+$checkbox-checked-sm-x: 473px;
+$checkbox-checked-sm-y: 65px;
+$checkbox-checked-sm-offset-x: -473px;
+$checkbox-checked-sm-offset-y: -65px;
+$checkbox-checked-sm-width: 14px;
+$checkbox-checked-sm-height: 14px;
+$checkbox-checked-sm-total-width: 487px;
+$checkbox-checked-sm-total-height: 450px;
+$checkbox-checked-sm-image: "/assets/img/sprite_2019-12-13-09-30.png";
+$checkbox-checked-sm: (
+  473px,
+  65px,
+  -473px,
+  -65px,
+  14px,
+  14px,
+  487px,
+  450px,
+  "/assets/img/sprite_2019-12-13-09-30.png",
+  "checkbox-checked-sm"
+);
+$checkbox-checked-name: "checkbox-checked";
+$checkbox-checked-x: 428px;
+$checkbox-checked-y: 27px;
+$checkbox-checked-offset-x: -428px;
+$checkbox-checked-offset-y: -27px;
+$checkbox-checked-width: 22px;
+$checkbox-checked-height: 22px;
+$checkbox-checked-total-width: 487px;
+$checkbox-checked-total-height: 450px;
+$checkbox-checked-image: "/assets/img/sprite_2019-12-13-09-30.png";
+$checkbox-checked: (
+  428px,
+  27px,
+  -428px,
+  -27px,
+  22px,
+  22px,
+  487px,
+  450px,
+  "/assets/img/sprite_2019-12-13-09-30.png",
+  "checkbox-checked"
+);
+$checkbox-hover-sm-name: "checkbox-hover-sm";
+$checkbox-hover-sm-x: 473px;
+$checkbox-hover-sm-y: 84px;
+$checkbox-hover-sm-offset-x: -473px;
+$checkbox-hover-sm-offset-y: -84px;
+$checkbox-hover-sm-width: 14px;
+$checkbox-hover-sm-height: 14px;
+$checkbox-hover-sm-total-width: 487px;
+$checkbox-hover-sm-total-height: 450px;
+$checkbox-hover-sm-image: "/assets/img/sprite_2019-12-13-09-30.png";
+$checkbox-hover-sm: (
+  473px,
+  84px,
+  -473px,
+  -84px,
+  14px,
+  14px,
+  487px,
+  450px,
+  "/assets/img/sprite_2019-12-13-09-30.png",
+  "checkbox-hover-sm"
+);
+$checkbox-hover-name: "checkbox-hover";
+$checkbox-hover-x: 428px;
+$checkbox-hover-y: 54px;
+$checkbox-hover-offset-x: -428px;
+$checkbox-hover-offset-y: -54px;
+$checkbox-hover-width: 22px;
+$checkbox-hover-height: 22px;
+$checkbox-hover-total-width: 487px;
+$checkbox-hover-total-height: 450px;
+$checkbox-hover-image: "/assets/img/sprite_2019-12-13-09-30.png";
+$checkbox-hover: (
+  428px,
+  54px,
+  -428px,
+  -54px,
+  22px,
+  22px,
+  487px,
+  450px,
+  "/assets/img/sprite_2019-12-13-09-30.png",
+  "checkbox-hover"
+);
+$checkbox-sm-name: "checkbox-sm";
+$checkbox-sm-x: 473px;
+$checkbox-sm-y: 103px;
+$checkbox-sm-offset-x: -473px;
+$checkbox-sm-offset-y: -103px;
+$checkbox-sm-width: 14px;
+$checkbox-sm-height: 14px;
+$checkbox-sm-total-width: 487px;
+$checkbox-sm-total-height: 450px;
+$checkbox-sm-image: "/assets/img/sprite_2019-12-13-09-30.png";
+$checkbox-sm: (
+  473px,
+  103px,
+  -473px,
+  -103px,
+  14px,
+  14px,
+  487px,
+  450px,
+  "/assets/img/sprite_2019-12-13-09-30.png",
+  "checkbox-sm"
+);
+$checkbox-name: "checkbox";
+$checkbox-x: 428px;
+$checkbox-y: 81px;
+$checkbox-offset-x: -428px;
+$checkbox-offset-y: -81px;
+$checkbox-width: 22px;
+$checkbox-height: 22px;
+$checkbox-total-width: 487px;
+$checkbox-total-height: 450px;
+$checkbox-image: "/assets/img/sprite_2019-12-13-09-30.png";
+$checkbox: (
+  428px,
+  81px,
+  -428px,
+  -81px,
+  22px,
+  22px,
+  487px,
+  450px,
+  "/assets/img/sprite_2019-12-13-09-30.png",
+  "checkbox"
+);
+$error-donut-name: "error-donut";
+$error-donut-x: 192px;
+$error-donut-y: 130px;
+$error-donut-offset-x: -192px;
+$error-donut-offset-y: -130px;
+$error-donut-width: 91px;
+$error-donut-height: 89px;
+$error-donut-total-width: 487px;
+$error-donut-total-height: 450px;
+$error-donut-image: "/assets/img/sprite_2019-12-13-09-30.png";
+$error-donut: (
+  192px,
+  130px,
+  -192px,
+  -130px,
+  91px,
+  89px,
+  487px,
+  450px,
+  "/assets/img/sprite_2019-12-13-09-30.png",
+  "error-donut"
+);
+
+$ic-arrow-left-wht-name: "ic-arrow-left-wht";
+$ic-arrow-left-wht-x: 455px;
+$ic-arrow-left-wht-y: 0px;
+$ic-arrow-left-wht-offset-x: -455px;
+$ic-arrow-left-wht-offset-y: 0px;
+$ic-arrow-left-wht-width: 13px;
+$ic-arrow-left-wht-height: 22px;
+$ic-arrow-left-wht-total-width: 487px;
+$ic-arrow-left-wht-total-height: 450px;
+$ic-arrow-left-wht-image: "/assets/img/sprite_2019-12-13-09-30.png";
+$ic-arrow-left-wht: (
+  455px,
+  0px,
+  -455px,
+  0px,
+  13px,
+  22px,
+  487px,
+  450px,
+  "/assets/img/sprite_2019-12-13-09-30.png",
+  "ic-arrow-left-wht"
+);
+$ic-arrow-right-double-name: "ic-arrow-right-double";
+$ic-arrow-right-double-x: 473px;
+$ic-arrow-right-double-y: 363px;
+$ic-arrow-right-double-offset-x: -473px;
+$ic-arrow-right-double-offset-y: -363px;
+$ic-arrow-right-double-width: 9px;
+$ic-arrow-right-double-height: 13px;
+$ic-arrow-right-double-total-width: 487px;
+$ic-arrow-right-double-total-height: 450px;
+$ic-arrow-right-double-image: "/assets/img/sprite_2019-12-13-09-30.png";
+$ic-arrow-right-double: (
+  473px,
+  363px,
+  -473px,
+  -363px,
+  9px,
+  13px,
+  487px,
+  450px,
+  "/assets/img/sprite_2019-12-13-09-30.png",
+  "ic-arrow-right-double"
+);
+$ic-arrow-right-new-name: "ic-arrow-right-new";
+$ic-arrow-right-new-x: 137px;
+$ic-arrow-right-new-y: 408px;
+$ic-arrow-right-new-offset-x: -137px;
+$ic-arrow-right-new-offset-y: -408px;
+$ic-arrow-right-new-width: 16px;
+$ic-arrow-right-new-height: 17px;
+$ic-arrow-right-new-total-width: 487px;
+$ic-arrow-right-new-total-height: 450px;
+$ic-arrow-right-new-image: "/assets/img/sprite_2019-12-13-09-30.png";
+$ic-arrow-right-new: (
+  137px,
+  408px,
+  -137px,
+  -408px,
+  16px,
+  17px,
+  487px,
+  450px,
+  "/assets/img/sprite_2019-12-13-09-30.png",
+  "ic-arrow-right-new"
+);
+$ic-back-arrow-name: "ic-back-arrow";
+$ic-back-arrow-x: 184px;
+$ic-back-arrow-y: 379px;
+$ic-back-arrow-offset-x: -184px;
+$ic-back-arrow-offset-y: -379px;
+$ic-back-arrow-width: 24px;
+$ic-back-arrow-height: 16px;
+$ic-back-arrow-total-width: 487px;
+$ic-back-arrow-total-height: 450px;
+$ic-back-arrow-image: "/assets/img/sprite_2019-12-13-09-30.png";
+$ic-back-arrow: (
+  184px,
+  379px,
+  -184px,
+  -379px,
+  24px,
+  16px,
+  487px,
+  450px,
+  "/assets/img/sprite_2019-12-13-09-30.png",
+  "ic-back-arrow"
+);
+
+$ic-checkbox-selected-name: "ic-checkbox-selected";
+$ic-checkbox-selected-x: 428px;
+$ic-checkbox-selected-y: 108px;
+$ic-checkbox-selected-offset-x: -428px;
+$ic-checkbox-selected-offset-y: -108px;
+$ic-checkbox-selected-width: 22px;
+$ic-checkbox-selected-height: 22px;
+$ic-checkbox-selected-total-width: 487px;
+$ic-checkbox-selected-total-height: 450px;
+$ic-checkbox-selected-image: "/assets/img/sprite_2019-12-13-09-30.png";
+$ic-checkbox-selected: (
+  428px,
+  108px,
+  -428px,
+  -108px,
+  22px,
+  22px,
+  487px,
+  450px,
+  "/assets/img/sprite_2019-12-13-09-30.png",
+  "ic-checkbox-selected"
+);
+$ic-checkbox-name: "ic-checkbox";
+$ic-checkbox-x: 428px;
+$ic-checkbox-y: 135px;
+$ic-checkbox-offset-x: -428px;
+$ic-checkbox-offset-y: -135px;
+$ic-checkbox-width: 22px;
+$ic-checkbox-height: 22px;
+$ic-checkbox-total-width: 487px;
+$ic-checkbox-total-height: 450px;
+$ic-checkbox-image: "/assets/img/sprite_2019-12-13-09-30.png";
+$ic-checkbox: (
+  428px,
+  135px,
+  -428px,
+  -135px,
+  22px,
+  22px,
+  487px,
+  450px,
+  "/assets/img/sprite_2019-12-13-09-30.png",
+  "ic-checkbox"
+);
+$ic-close-filters-name: "ic-close-filters";
+$ic-close-filters-x: 455px;
+$ic-close-filters-y: 27px;
+$ic-close-filters-offset-x: -455px;
+$ic-close-filters-offset-y: -27px;
+$ic-close-filters-width: 9px;
+$ic-close-filters-height: 9px;
+$ic-close-filters-total-width: 487px;
+$ic-close-filters-total-height: 450px;
+$ic-close-filters-image: "/assets/img/sprite_2019-12-13-09-30.png";
+$ic-close-filters: (
+  455px,
+  27px,
+  -455px,
+  -27px,
+  9px,
+  9px,
+  487px,
+  450px,
+  "/assets/img/sprite_2019-12-13-09-30.png",
+  "ic-close-filters"
+);
+$ic-close-modal-hover-name: "ic-close-modal-hover";
+$ic-close-modal-hover-x: 391px;
+$ic-close-modal-hover-y: 161px;
+$ic-close-modal-hover-offset-x: -391px;
+$ic-close-modal-hover-offset-y: -161px;
+$ic-close-modal-hover-width: 32px;
+$ic-close-modal-hover-height: 32px;
+$ic-close-modal-hover-total-width: 487px;
+$ic-close-modal-hover-total-height: 450px;
+$ic-close-modal-hover-image: "/assets/img/sprite_2019-12-13-09-30.png";
+$ic-close-modal-hover: (
+  391px,
+  161px,
+  -391px,
+  -161px,
+  32px,
+  32px,
+  487px,
+  450px,
+  "/assets/img/sprite_2019-12-13-09-30.png",
+  "ic-close-modal-hover"
+);
+$ic-close-modal-name: "ic-close-modal";
+$ic-close-modal-x: 0px;
+$ic-close-modal-y: 303px;
+$ic-close-modal-offset-x: 0px;
+$ic-close-modal-offset-y: -303px;
+$ic-close-modal-width: 32px;
+$ic-close-modal-height: 32px;
+$ic-close-modal-total-width: 487px;
+$ic-close-modal-total-height: 450px;
+$ic-close-modal-image: "/assets/img/sprite_2019-12-13-09-30.png";
+$ic-close-modal: (
+  0px,
+  303px,
+  0px,
+  -303px,
+  32px,
+  32px,
+  487px,
+  450px,
+  "/assets/img/sprite_2019-12-13-09-30.png",
+  "ic-close-modal"
+);
+$ic-current-name: "ic-current";
+$ic-current-x: 290px;
+$ic-current-y: 161px;
+$ic-current-offset-x: -290px;
+$ic-current-offset-y: -161px;
+$ic-current-width: 48px;
+$ic-current-height: 48px;
+$ic-current-total-width: 487px;
+$ic-current-total-height: 450px;
+$ic-current-image: "/assets/img/sprite_2019-12-13-09-30.png";
+$ic-current: (
+  290px,
+  161px,
+  -290px,
+  -161px,
+  48px,
+  48px,
+  487px,
+  450px,
+  "/assets/img/sprite_2019-12-13-09-30.png",
+  "ic-current"
+);
+
+$ico-show-password-hover-name: "ico-show-password-hover";
+$ico-show-password-hover-x: 235px;
+$ico-show-password-hover-y: 236px;
+$ico-show-password-hover-offset-x: -235px;
+$ico-show-password-hover-offset-y: -236px;
+$ico-show-password-hover-width: 17px;
+$ico-show-password-hover-height: 11px;
+$ico-show-password-hover-total-width: 487px;
+$ico-show-password-hover-total-height: 450px;
+$ico-show-password-hover-image: "/assets/img/sprite_2019-12-13-09-30.png";
+$ico-show-password-hover: (
+  235px,
+  236px,
+  -235px,
+  -236px,
+  17px,
+  11px,
+  487px,
+  450px,
+  "/assets/img/sprite_2019-12-13-09-30.png",
+  "ico-show-password-hover"
+);
+$ico-show-password-name: "ico-show-password";
+$ico-show-password-x: 257px;
+$ico-show-password-y: 236px;
+$ico-show-password-offset-x: -257px;
+$ico-show-password-offset-y: -236px;
+$ico-show-password-width: 17px;
+$ico-show-password-height: 11px;
+$ico-show-password-total-width: 487px;
+$ico-show-password-total-height: 450px;
+$ico-show-password-image: "/assets/img/sprite_2019-12-13-09-30.png";
+$ico-show-password: (
+  257px,
+  236px,
+  -257px,
+  -236px,
+  17px,
+  11px,
+  487px,
+  450px,
+  "/assets/img/sprite_2019-12-13-09-30.png",
+  "ico-show-password"
+);
+
+$tab-coupons-grn-name: "tab-coupons-grn";
+$tab-coupons-grn-x: 253px;
+$tab-coupons-grn-y: 303px;
+$tab-coupons-grn-offset-x: -253px;
+$tab-coupons-grn-offset-y: -303px;
+$tab-coupons-grn-width: 28px;
+$tab-coupons-grn-height: 28px;
+$tab-coupons-grn-total-width: 487px;
+$tab-coupons-grn-total-height: 450px;
+$tab-coupons-grn-image: "/assets/img/sprite_2019-12-13-09-30.png";
+$tab-coupons-grn: (
+  253px,
+  303px,
+  -253px,
+  -303px,
+  28px,
+  28px,
+  487px,
+  450px,
+  "/assets/img/sprite_2019-12-13-09-30.png",
+  "tab-coupons-grn"
+);
+$tab-coupons-name: "tab-coupons";
+$tab-coupons-x: 286px;
+$tab-coupons-y: 303px;
+$tab-coupons-offset-x: -286px;
+$tab-coupons-offset-y: -303px;
+$tab-coupons-width: 28px;
+$tab-coupons-height: 28px;
+$tab-coupons-total-width: 487px;
+$tab-coupons-total-height: 450px;
+$tab-coupons-image: "/assets/img/sprite_2019-12-13-09-30.png";
+$tab-coupons: (
+  286px,
+  303px,
+  -286px,
+  -303px,
+  28px,
+  28px,
+  487px,
+  450px,
+  "/assets/img/sprite_2019-12-13-09-30.png",
+  "tab-coupons"
+);
+$tab-my-rewards-grn-name: "tab-my-rewards-grn";
+$tab-my-rewards-grn-x: 0px;
+$tab-my-rewards-grn-y: 379px;
+$tab-my-rewards-grn-offset-x: 0px;
+$tab-my-rewards-grn-offset-y: -379px;
+$tab-my-rewards-grn-width: 24px;
+$tab-my-rewards-grn-height: 24px;
+$tab-my-rewards-grn-total-width: 487px;
+$tab-my-rewards-grn-total-height: 450px;
+$tab-my-rewards-grn-image: "/assets/img/sprite_2019-12-13-09-30.png";
+$tab-my-rewards-grn: (
+  0px,
+  379px,
+  0px,
+  -379px,
+  24px,
+  24px,
+  487px,
+  450px,
+  "/assets/img/sprite_2019-12-13-09-30.png",
+  "tab-my-rewards-grn"
+);
+$tab-my-rewards-name: "tab-my-rewards";
+$tab-my-rewards-x: 29px;
+$tab-my-rewards-y: 379px;
+$tab-my-rewards-offset-x: -29px;
+$tab-my-rewards-offset-y: -379px;
+$tab-my-rewards-width: 24px;
+$tab-my-rewards-height: 24px;
+$tab-my-rewards-total-width: 487px;
+$tab-my-rewards-total-height: 450px;
+$tab-my-rewards-image: "/assets/img/sprite_2019-12-13-09-30.png";
+$tab-my-rewards: (
+  29px,
+  379px,
+  -29px,
+  -379px,
+  24px,
+  24px,
+  487px,
+  450px,
+  "/assets/img/sprite_2019-12-13-09-30.png",
+  "tab-my-rewards"
+);
+$tab-reward-menu-grn-name: "tab-reward-menu-grn";
+$tab-reward-menu-grn-x: 428px;
+$tab-reward-menu-grn-y: 270px;
+$tab-reward-menu-grn-offset-x: -428px;
+$tab-reward-menu-grn-offset-y: -270px;
+$tab-reward-menu-grn-width: 17px;
+$tab-reward-menu-grn-height: 26px;
+$tab-reward-menu-grn-total-width: 487px;
+$tab-reward-menu-grn-total-height: 450px;
+$tab-reward-menu-grn-image: "/assets/img/sprite_2019-12-13-09-30.png";
+$tab-reward-menu-grn: (
+  428px,
+  270px,
+  -428px,
+  -270px,
+  17px,
+  26px,
+  487px,
+  450px,
+  "/assets/img/sprite_2019-12-13-09-30.png",
+  "tab-reward-menu-grn"
+);
+$tab-reward-menu-name: "tab-reward-menu";
+$tab-reward-menu-x: 428px;
+$tab-reward-menu-y: 301px;
+$tab-reward-menu-offset-x: -428px;
+$tab-reward-menu-offset-y: -301px;
+$tab-reward-menu-width: 17px;
+$tab-reward-menu-height: 26px;
+$tab-reward-menu-total-width: 487px;
+$tab-reward-menu-total-height: 450px;
+$tab-reward-menu-image: "/assets/img/sprite_2019-12-13-09-30.png";
+$tab-reward-menu: (
+  428px,
+  301px,
+  -428px,
+  -301px,
+  17px,
+  26px,
+  487px,
+  450px,
+  "/assets/img/sprite_2019-12-13-09-30.png",
+  "tab-reward-menu"
+);
+
+$caret-next-disabled-2x-name: "caret-next-disabled@2x";
+$caret-next-disabled-2x-x: 64px;
+$caret-next-disabled-2x-y: 680px;
+$caret-next-disabled-2x-offset-x: -64px;
+$caret-next-disabled-2x-offset-y: -680px;
+$caret-next-disabled-2x-width: 52px;
+$caret-next-disabled-2x-height: 64px;
+$caret-next-disabled-2x-total-width: 974px;
+$caret-next-disabled-2x-total-height: 900px;
+$caret-next-disabled-2x-image: "/assets/img/sprite_2019-12-13-09-30@2x.png";
+$caret-next-disabled-2x: (
+  64px,
+  680px,
+  -64px,
+  -680px,
+  52px,
+  64px,
+  974px,
+  900px,
+  "/assets/img/sprite_2019-12-13-09-30@2x.png",
+  "caret-next-disabled@2x"
+);
+$caret-next-hover-2x-name: "caret-next-hover@2x";
+$caret-next-hover-2x-x: 126px;
+$caret-next-hover-2x-y: 680px;
+$caret-next-hover-2x-offset-x: -126px;
+$caret-next-hover-2x-offset-y: -680px;
+$caret-next-hover-2x-width: 52px;
+$caret-next-hover-2x-height: 64px;
+$caret-next-hover-2x-total-width: 974px;
+$caret-next-hover-2x-total-height: 900px;
+$caret-next-hover-2x-image: "/assets/img/sprite_2019-12-13-09-30@2x.png";
+$caret-next-hover-2x: (
+  126px,
+  680px,
+  -126px,
+  -680px,
+  52px,
+  64px,
+  974px,
+  900px,
+  "/assets/img/sprite_2019-12-13-09-30@2x.png",
+  "caret-next-hover@2x"
+);
+$caret-next-2x-name: "caret-next@2x";
+$caret-next-2x-x: 188px;
+$caret-next-2x-y: 680px;
+$caret-next-2x-offset-x: -188px;
+$caret-next-2x-offset-y: -680px;
+$caret-next-2x-width: 52px;
+$caret-next-2x-height: 64px;
+$caret-next-2x-total-width: 974px;
+$caret-next-2x-total-height: 900px;
+$caret-next-2x-image: "/assets/img/sprite_2019-12-13-09-30@2x.png";
+$caret-next-2x: (
+  188px,
+  680px,
+  -188px,
+  -680px,
+  52px,
+  64px,
+  974px,
+  900px,
+  "/assets/img/sprite_2019-12-13-09-30@2x.png",
+  "caret-next@2x"
+);
+$caret-prev-disabled-2x-name: "caret-prev-disabled@2x";
+$caret-prev-disabled-2x-x: 250px;
+$caret-prev-disabled-2x-y: 680px;
+$caret-prev-disabled-2x-offset-x: -250px;
+$caret-prev-disabled-2x-offset-y: -680px;
+$caret-prev-disabled-2x-width: 52px;
+$caret-prev-disabled-2x-height: 64px;
+$caret-prev-disabled-2x-total-width: 974px;
+$caret-prev-disabled-2x-total-height: 900px;
+$caret-prev-disabled-2x-image: "/assets/img/sprite_2019-12-13-09-30@2x.png";
+$caret-prev-disabled-2x: (
+  250px,
+  680px,
+  -250px,
+  -680px,
+  52px,
+  64px,
+  974px,
+  900px,
+  "/assets/img/sprite_2019-12-13-09-30@2x.png",
+  "caret-prev-disabled@2x"
+);
+$caret-prev-hover-2x-name: "caret-prev-hover@2x";
+$caret-prev-hover-2x-x: 312px;
+$caret-prev-hover-2x-y: 680px;
+$caret-prev-hover-2x-offset-x: -312px;
+$caret-prev-hover-2x-offset-y: -680px;
+$caret-prev-hover-2x-width: 52px;
+$caret-prev-hover-2x-height: 64px;
+$caret-prev-hover-2x-total-width: 974px;
+$caret-prev-hover-2x-total-height: 900px;
+$caret-prev-hover-2x-image: "/assets/img/sprite_2019-12-13-09-30@2x.png";
+$caret-prev-hover-2x: (
+  312px,
+  680px,
+  -312px,
+  -680px,
+  52px,
+  64px,
+  974px,
+  900px,
+  "/assets/img/sprite_2019-12-13-09-30@2x.png",
+  "caret-prev-hover@2x"
+);
+$caret-prev-2x-name: "caret-prev@2x";
+$caret-prev-2x-x: 374px;
+$caret-prev-2x-y: 680px;
+$caret-prev-2x-offset-x: -374px;
+$caret-prev-2x-offset-y: -680px;
+$caret-prev-2x-width: 52px;
+$caret-prev-2x-height: 64px;
+$caret-prev-2x-total-width: 974px;
+$caret-prev-2x-total-height: 900px;
+$caret-prev-2x-image: "/assets/img/sprite_2019-12-13-09-30@2x.png";
+$caret-prev-2x: (
+  374px,
+  680px,
+  -374px,
+  -680px,
+  52px,
+  64px,
+  974px,
+  900px,
+  "/assets/img/sprite_2019-12-13-09-30@2x.png",
+  "caret-prev@2x"
+);
+$checkbox-checked-hover-sm-2x-name: "checkbox-checked-hover-sm@2x";
+$checkbox-checked-hover-sm-2x-x: 946px;
+$checkbox-checked-hover-sm-2x-y: 92px;
+$checkbox-checked-hover-sm-2x-offset-x: -946px;
+$checkbox-checked-hover-sm-2x-offset-y: -92px;
+$checkbox-checked-hover-sm-2x-width: 28px;
+$checkbox-checked-hover-sm-2x-height: 28px;
+$checkbox-checked-hover-sm-2x-total-width: 974px;
+$checkbox-checked-hover-sm-2x-total-height: 900px;
+$checkbox-checked-hover-sm-2x-image: "/assets/img/sprite_2019-12-13-09-30@2x.png";
+$checkbox-checked-hover-sm-2x: (
+  946px,
+  92px,
+  -946px,
+  -92px,
+  28px,
+  28px,
+  974px,
+  900px,
+  "/assets/img/sprite_2019-12-13-09-30@2x.png",
+  "checkbox-checked-hover-sm@2x"
+);
+$checkbox-checked-hover-2x-name: "checkbox-checked-hover@2x";
+$checkbox-checked-hover-2x-x: 856px;
+$checkbox-checked-hover-2x-y: 0px;
+$checkbox-checked-hover-2x-offset-x: -856px;
+$checkbox-checked-hover-2x-offset-y: 0px;
+$checkbox-checked-hover-2x-width: 44px;
+$checkbox-checked-hover-2x-height: 44px;
+$checkbox-checked-hover-2x-total-width: 974px;
+$checkbox-checked-hover-2x-total-height: 900px;
+$checkbox-checked-hover-2x-image: "/assets/img/sprite_2019-12-13-09-30@2x.png";
+$checkbox-checked-hover-2x: (
+  856px,
+  0px,
+  -856px,
+  0px,
+  44px,
+  44px,
+  974px,
+  900px,
+  "/assets/img/sprite_2019-12-13-09-30@2x.png",
+  "checkbox-checked-hover@2x"
+);
+$checkbox-checked-sm-2x-name: "checkbox-checked-sm@2x";
+$checkbox-checked-sm-2x-x: 946px;
+$checkbox-checked-sm-2x-y: 130px;
+$checkbox-checked-sm-2x-offset-x: -946px;
+$checkbox-checked-sm-2x-offset-y: -130px;
+$checkbox-checked-sm-2x-width: 28px;
+$checkbox-checked-sm-2x-height: 28px;
+$checkbox-checked-sm-2x-total-width: 974px;
+$checkbox-checked-sm-2x-total-height: 900px;
+$checkbox-checked-sm-2x-image: "/assets/img/sprite_2019-12-13-09-30@2x.png";
+$checkbox-checked-sm-2x: (
+  946px,
+  130px,
+  -946px,
+  -130px,
+  28px,
+  28px,
+  974px,
+  900px,
+  "/assets/img/sprite_2019-12-13-09-30@2x.png",
+  "checkbox-checked-sm@2x"
+);
+$checkbox-checked-2x-name: "checkbox-checked@2x";
+$checkbox-checked-2x-x: 856px;
+$checkbox-checked-2x-y: 54px;
+$checkbox-checked-2x-offset-x: -856px;
+$checkbox-checked-2x-offset-y: -54px;
+$checkbox-checked-2x-width: 44px;
+$checkbox-checked-2x-height: 44px;
+$checkbox-checked-2x-total-width: 974px;
+$checkbox-checked-2x-total-height: 900px;
+$checkbox-checked-2x-image: "/assets/img/sprite_2019-12-13-09-30@2x.png";
+$checkbox-checked-2x: (
+  856px,
+  54px,
+  -856px,
+  -54px,
+  44px,
+  44px,
+  974px,
+  900px,
+  "/assets/img/sprite_2019-12-13-09-30@2x.png",
+  "checkbox-checked@2x"
+);
+$checkbox-hover-sm-2x-name: "checkbox-hover-sm@2x";
+$checkbox-hover-sm-2x-x: 946px;
+$checkbox-hover-sm-2x-y: 168px;
+$checkbox-hover-sm-2x-offset-x: -946px;
+$checkbox-hover-sm-2x-offset-y: -168px;
+$checkbox-hover-sm-2x-width: 28px;
+$checkbox-hover-sm-2x-height: 28px;
+$checkbox-hover-sm-2x-total-width: 974px;
+$checkbox-hover-sm-2x-total-height: 900px;
+$checkbox-hover-sm-2x-image: "/assets/img/sprite_2019-12-13-09-30@2x.png";
+$checkbox-hover-sm-2x: (
+  946px,
+  168px,
+  -946px,
+  -168px,
+  28px,
+  28px,
+  974px,
+  900px,
+  "/assets/img/sprite_2019-12-13-09-30@2x.png",
+  "checkbox-hover-sm@2x"
+);
+$checkbox-hover-2x-name: "checkbox-hover@2x";
+$checkbox-hover-2x-x: 856px;
+$checkbox-hover-2x-y: 108px;
+$checkbox-hover-2x-offset-x: -856px;
+$checkbox-hover-2x-offset-y: -108px;
+$checkbox-hover-2x-width: 44px;
+$checkbox-hover-2x-height: 44px;
+$checkbox-hover-2x-total-width: 974px;
+$checkbox-hover-2x-total-height: 900px;
+$checkbox-hover-2x-image: "/assets/img/sprite_2019-12-13-09-30@2x.png";
+$checkbox-hover-2x: (
+  856px,
+  108px,
+  -856px,
+  -108px,
+  44px,
+  44px,
+  974px,
+  900px,
+  "/assets/img/sprite_2019-12-13-09-30@2x.png",
+  "checkbox-hover@2x"
+);
+$checkbox-sm-2x-name: "checkbox-sm@2x";
+$checkbox-sm-2x-x: 946px;
+$checkbox-sm-2x-y: 206px;
+$checkbox-sm-2x-offset-x: -946px;
+$checkbox-sm-2x-offset-y: -206px;
+$checkbox-sm-2x-width: 28px;
+$checkbox-sm-2x-height: 28px;
+$checkbox-sm-2x-total-width: 974px;
+$checkbox-sm-2x-total-height: 900px;
+$checkbox-sm-2x-image: "/assets/img/sprite_2019-12-13-09-30@2x.png";
+$checkbox-sm-2x: (
+  946px,
+  206px,
+  -946px,
+  -206px,
+  28px,
+  28px,
+  974px,
+  900px,
+  "/assets/img/sprite_2019-12-13-09-30@2x.png",
+  "checkbox-sm@2x"
+);
+$checkbox-2x-name: "checkbox@2x";
+$checkbox-2x-x: 856px;
+$checkbox-2x-y: 162px;
+$checkbox-2x-offset-x: -856px;
+$checkbox-2x-offset-y: -162px;
+$checkbox-2x-width: 44px;
+$checkbox-2x-height: 44px;
+$checkbox-2x-total-width: 974px;
+$checkbox-2x-total-height: 900px;
+$checkbox-2x-image: "/assets/img/sprite_2019-12-13-09-30@2x.png";
+$checkbox-2x: (
+  856px,
+  162px,
+  -856px,
+  -162px,
+  44px,
+  44px,
+  974px,
+  900px,
+  "/assets/img/sprite_2019-12-13-09-30@2x.png",
+  "checkbox@2x"
+);
+$error-donut-2x-name: "error-donut@2x";
+$error-donut-2x-x: 384px;
+$error-donut-2x-y: 260px;
+$error-donut-2x-offset-x: -384px;
+$error-donut-2x-offset-y: -260px;
+$error-donut-2x-width: 182px;
+$error-donut-2x-height: 178px;
+$error-donut-2x-total-width: 974px;
+$error-donut-2x-total-height: 900px;
+$error-donut-2x-image: "/assets/img/sprite_2019-12-13-09-30@2x.png";
+$error-donut-2x: (
+  384px,
+  260px,
+  -384px,
+  -260px,
+  182px,
+  178px,
+  974px,
+  900px,
+  "/assets/img/sprite_2019-12-13-09-30@2x.png",
+  "error-donut@2x"
+);
+
+$ic-arrow-left-wht-2x-name: "ic-arrow-left-wht@2x";
+$ic-arrow-left-wht-2x-x: 910px;
+$ic-arrow-left-wht-2x-y: 0px;
+$ic-arrow-left-wht-2x-offset-x: -910px;
+$ic-arrow-left-wht-2x-offset-y: 0px;
+$ic-arrow-left-wht-2x-width: 26px;
+$ic-arrow-left-wht-2x-height: 44px;
+$ic-arrow-left-wht-2x-total-width: 974px;
+$ic-arrow-left-wht-2x-total-height: 900px;
+$ic-arrow-left-wht-2x-image: "/assets/img/sprite_2019-12-13-09-30@2x.png";
+$ic-arrow-left-wht-2x: (
+  910px,
+  0px,
+  -910px,
+  0px,
+  26px,
+  44px,
+  974px,
+  900px,
+  "/assets/img/sprite_2019-12-13-09-30@2x.png",
+  "ic-arrow-left-wht@2x"
+);
+$ic-arrow-right-double-2x-name: "ic-arrow-right-double@2x";
+$ic-arrow-right-double-2x-x: 946px;
+$ic-arrow-right-double-2x-y: 726px;
+$ic-arrow-right-double-2x-offset-x: -946px;
+$ic-arrow-right-double-2x-offset-y: -726px;
+$ic-arrow-right-double-2x-width: 18px;
+$ic-arrow-right-double-2x-height: 26px;
+$ic-arrow-right-double-2x-total-width: 974px;
+$ic-arrow-right-double-2x-total-height: 900px;
+$ic-arrow-right-double-2x-image: "/assets/img/sprite_2019-12-13-09-30@2x.png";
+$ic-arrow-right-double-2x: (
+  946px,
+  726px,
+  -946px,
+  -726px,
+  18px,
+  26px,
+  974px,
+  900px,
+  "/assets/img/sprite_2019-12-13-09-30@2x.png",
+  "ic-arrow-right-double@2x"
+);
+$ic-arrow-right-new-2x-name: "ic-arrow-right-new@2x";
+$ic-arrow-right-new-2x-x: 274px;
+$ic-arrow-right-new-2x-y: 816px;
+$ic-arrow-right-new-2x-offset-x: -274px;
+$ic-arrow-right-new-2x-offset-y: -816px;
+$ic-arrow-right-new-2x-width: 32px;
+$ic-arrow-right-new-2x-height: 34px;
+$ic-arrow-right-new-2x-total-width: 974px;
+$ic-arrow-right-new-2x-total-height: 900px;
+$ic-arrow-right-new-2x-image: "/assets/img/sprite_2019-12-13-09-30@2x.png";
+$ic-arrow-right-new-2x: (
+  274px,
+  816px,
+  -274px,
+  -816px,
+  32px,
+  34px,
+  974px,
+  900px,
+  "/assets/img/sprite_2019-12-13-09-30@2x.png",
+  "ic-arrow-right-new@2x"
+);
+$ic-back-arrow-2x-name: "ic-back-arrow@2x";
+$ic-back-arrow-2x-x: 368px;
+$ic-back-arrow-2x-y: 758px;
+$ic-back-arrow-2x-offset-x: -368px;
+$ic-back-arrow-2x-offset-y: -758px;
+$ic-back-arrow-2x-width: 48px;
+$ic-back-arrow-2x-height: 32px;
+$ic-back-arrow-2x-total-width: 974px;
+$ic-back-arrow-2x-total-height: 900px;
+$ic-back-arrow-2x-image: "/assets/img/sprite_2019-12-13-09-30@2x.png";
+$ic-back-arrow-2x: (
+  368px,
+  758px,
+  -368px,
+  -758px,
+  48px,
+  32px,
+  974px,
+  900px,
+  "/assets/img/sprite_2019-12-13-09-30@2x.png",
+  "ic-back-arrow@2x"
+);
+
+$ic-checkbox-selected-2x-name: "ic-checkbox-selected@2x";
+$ic-checkbox-selected-2x-x: 856px;
+$ic-checkbox-selected-2x-y: 216px;
+$ic-checkbox-selected-2x-offset-x: -856px;
+$ic-checkbox-selected-2x-offset-y: -216px;
+$ic-checkbox-selected-2x-width: 44px;
+$ic-checkbox-selected-2x-height: 44px;
+$ic-checkbox-selected-2x-total-width: 974px;
+$ic-checkbox-selected-2x-total-height: 900px;
+$ic-checkbox-selected-2x-image: "/assets/img/sprite_2019-12-13-09-30@2x.png";
+$ic-checkbox-selected-2x: (
+  856px,
+  216px,
+  -856px,
+  -216px,
+  44px,
+  44px,
+  974px,
+  900px,
+  "/assets/img/sprite_2019-12-13-09-30@2x.png",
+  "ic-checkbox-selected@2x"
+);
+$ic-checkbox-2x-name: "ic-checkbox@2x";
+$ic-checkbox-2x-x: 856px;
+$ic-checkbox-2x-y: 270px;
+$ic-checkbox-2x-offset-x: -856px;
+$ic-checkbox-2x-offset-y: -270px;
+$ic-checkbox-2x-width: 44px;
+$ic-checkbox-2x-height: 44px;
+$ic-checkbox-2x-total-width: 974px;
+$ic-checkbox-2x-total-height: 900px;
+$ic-checkbox-2x-image: "/assets/img/sprite_2019-12-13-09-30@2x.png";
+$ic-checkbox-2x: (
+  856px,
+  270px,
+  -856px,
+  -270px,
+  44px,
+  44px,
+  974px,
+  900px,
+  "/assets/img/sprite_2019-12-13-09-30@2x.png",
+  "ic-checkbox@2x"
+);
+$ic-close-filters-2x-name: "ic-close-filters@2x";
+$ic-close-filters-2x-x: 910px;
+$ic-close-filters-2x-y: 54px;
+$ic-close-filters-2x-offset-x: -910px;
+$ic-close-filters-2x-offset-y: -54px;
+$ic-close-filters-2x-width: 18px;
+$ic-close-filters-2x-height: 18px;
+$ic-close-filters-2x-total-width: 974px;
+$ic-close-filters-2x-total-height: 900px;
+$ic-close-filters-2x-image: "/assets/img/sprite_2019-12-13-09-30@2x.png";
+$ic-close-filters-2x: (
+  910px,
+  54px,
+  -910px,
+  -54px,
+  18px,
+  18px,
+  974px,
+  900px,
+  "/assets/img/sprite_2019-12-13-09-30@2x.png",
+  "ic-close-filters@2x"
+);
+$ic-close-modal-hover-2x-name: "ic-close-modal-hover@2x";
+$ic-close-modal-hover-2x-x: 782px;
+$ic-close-modal-hover-2x-y: 322px;
+$ic-close-modal-hover-2x-offset-x: -782px;
+$ic-close-modal-hover-2x-offset-y: -322px;
+$ic-close-modal-hover-2x-width: 64px;
+$ic-close-modal-hover-2x-height: 64px;
+$ic-close-modal-hover-2x-total-width: 974px;
+$ic-close-modal-hover-2x-total-height: 900px;
+$ic-close-modal-hover-2x-image: "/assets/img/sprite_2019-12-13-09-30@2x.png";
+$ic-close-modal-hover-2x: (
+  782px,
+  322px,
+  -782px,
+  -322px,
+  64px,
+  64px,
+  974px,
+  900px,
+  "/assets/img/sprite_2019-12-13-09-30@2x.png",
+  "ic-close-modal-hover@2x"
+);
+$ic-close-modal-2x-name: "ic-close-modal@2x";
+$ic-close-modal-2x-x: 0px;
+$ic-close-modal-2x-y: 606px;
+$ic-close-modal-2x-offset-x: 0px;
+$ic-close-modal-2x-offset-y: -606px;
+$ic-close-modal-2x-width: 64px;
+$ic-close-modal-2x-height: 64px;
+$ic-close-modal-2x-total-width: 974px;
+$ic-close-modal-2x-total-height: 900px;
+$ic-close-modal-2x-image: "/assets/img/sprite_2019-12-13-09-30@2x.png";
+$ic-close-modal-2x: (
+  0px,
+  606px,
+  0px,
+  -606px,
+  64px,
+  64px,
+  974px,
+  900px,
+  "/assets/img/sprite_2019-12-13-09-30@2x.png",
+  "ic-close-modal@2x"
+);
+$ic-current-2x-name: "ic-current@2x";
+$ic-current-2x-x: 580px;
+$ic-current-2x-y: 322px;
+$ic-current-2x-offset-x: -580px;
+$ic-current-2x-offset-y: -322px;
+$ic-current-2x-width: 96px;
+$ic-current-2x-height: 96px;
+$ic-current-2x-total-width: 974px;
+$ic-current-2x-total-height: 900px;
+$ic-current-2x-image: "/assets/img/sprite_2019-12-13-09-30@2x.png";
+$ic-current-2x: (
+  580px,
+  322px,
+  -580px,
+  -322px,
+  96px,
+  96px,
+  974px,
+  900px,
+  "/assets/img/sprite_2019-12-13-09-30@2x.png",
+  "ic-current@2x"
+);
+
+$ico-show-password-hover-2x-name: "ico-show-password-hover@2x";
+$ico-show-password-hover-2x-x: 470px;
+$ico-show-password-hover-2x-y: 472px;
+$ico-show-password-hover-2x-offset-x: -470px;
+$ico-show-password-hover-2x-offset-y: -472px;
+$ico-show-password-hover-2x-width: 34px;
+$ico-show-password-hover-2x-height: 22px;
+$ico-show-password-hover-2x-total-width: 974px;
+$ico-show-password-hover-2x-total-height: 900px;
+$ico-show-password-hover-2x-image: "/assets/img/sprite_2019-12-13-09-30@2x.png";
+$ico-show-password-hover-2x: (
+  470px,
+  472px,
+  -470px,
+  -472px,
+  34px,
+  22px,
+  974px,
+  900px,
+  "/assets/img/sprite_2019-12-13-09-30@2x.png",
+  "ico-show-password-hover@2x"
+);
+$ico-show-password-2x-name: "ico-show-password@2x";
+$ico-show-password-2x-x: 514px;
+$ico-show-password-2x-y: 472px;
+$ico-show-password-2x-offset-x: -514px;
+$ico-show-password-2x-offset-y: -472px;
+$ico-show-password-2x-width: 34px;
+$ico-show-password-2x-height: 22px;
+$ico-show-password-2x-total-width: 974px;
+$ico-show-password-2x-total-height: 900px;
+$ico-show-password-2x-image: "/assets/img/sprite_2019-12-13-09-30@2x.png";
+$ico-show-password-2x: (
+  514px,
+  472px,
+  -514px,
+  -472px,
+  34px,
+  22px,
+  974px,
+  900px,
+  "/assets/img/sprite_2019-12-13-09-30@2x.png",
+  "ico-show-password@2x"
+);
+
+$tab-coupons-grn-2x-name: "tab-coupons-grn@2x";
+$tab-coupons-grn-2x-x: 506px;
+$tab-coupons-grn-2x-y: 606px;
+$tab-coupons-grn-2x-offset-x: -506px;
+$tab-coupons-grn-2x-offset-y: -606px;
+$tab-coupons-grn-2x-width: 56px;
+$tab-coupons-grn-2x-height: 56px;
+$tab-coupons-grn-2x-total-width: 974px;
+$tab-coupons-grn-2x-total-height: 900px;
+$tab-coupons-grn-2x-image: "/assets/img/sprite_2019-12-13-09-30@2x.png";
+$tab-coupons-grn-2x: (
+  506px,
+  606px,
+  -506px,
+  -606px,
+  56px,
+  56px,
+  974px,
+  900px,
+  "/assets/img/sprite_2019-12-13-09-30@2x.png",
+  "tab-coupons-grn@2x"
+);
+$tab-coupons-2x-name: "tab-coupons@2x";
+$tab-coupons-2x-x: 572px;
+$tab-coupons-2x-y: 606px;
+$tab-coupons-2x-offset-x: -572px;
+$tab-coupons-2x-offset-y: -606px;
+$tab-coupons-2x-width: 56px;
+$tab-coupons-2x-height: 56px;
+$tab-coupons-2x-total-width: 974px;
+$tab-coupons-2x-total-height: 900px;
+$tab-coupons-2x-image: "/assets/img/sprite_2019-12-13-09-30@2x.png";
+$tab-coupons-2x: (
+  572px,
+  606px,
+  -572px,
+  -606px,
+  56px,
+  56px,
+  974px,
+  900px,
+  "/assets/img/sprite_2019-12-13-09-30@2x.png",
+  "tab-coupons@2x"
+);
+$tab-my-rewards-grn-2x-name: "tab-my-rewards-grn@2x";
+$tab-my-rewards-grn-2x-x: 0px;
+$tab-my-rewards-grn-2x-y: 758px;
+$tab-my-rewards-grn-2x-offset-x: 0px;
+$tab-my-rewards-grn-2x-offset-y: -758px;
+$tab-my-rewards-grn-2x-width: 48px;
+$tab-my-rewards-grn-2x-height: 48px;
+$tab-my-rewards-grn-2x-total-width: 974px;
+$tab-my-rewards-grn-2x-total-height: 900px;
+$tab-my-rewards-grn-2x-image: "/assets/img/sprite_2019-12-13-09-30@2x.png";
+$tab-my-rewards-grn-2x: (
+  0px,
+  758px,
+  0px,
+  -758px,
+  48px,
+  48px,
+  974px,
+  900px,
+  "/assets/img/sprite_2019-12-13-09-30@2x.png",
+  "tab-my-rewards-grn@2x"
+);
+$tab-my-rewards-2x-name: "tab-my-rewards@2x";
+$tab-my-rewards-2x-x: 58px;
+$tab-my-rewards-2x-y: 758px;
+$tab-my-rewards-2x-offset-x: -58px;
+$tab-my-rewards-2x-offset-y: -758px;
+$tab-my-rewards-2x-width: 48px;
+$tab-my-rewards-2x-height: 48px;
+$tab-my-rewards-2x-total-width: 974px;
+$tab-my-rewards-2x-total-height: 900px;
+$tab-my-rewards-2x-image: "/assets/img/sprite_2019-12-13-09-30@2x.png";
+$tab-my-rewards-2x: (
+  58px,
+  758px,
+  -58px,
+  -758px,
+  48px,
+  48px,
+  974px,
+  900px,
+  "/assets/img/sprite_2019-12-13-09-30@2x.png",
+  "tab-my-rewards@2x"
+);
+$tab-reward-menu-grn-2x-name: "tab-reward-menu-grn@2x";
+$tab-reward-menu-grn-2x-x: 856px;
+$tab-reward-menu-grn-2x-y: 540px;
+$tab-reward-menu-grn-2x-offset-x: -856px;
+$tab-reward-menu-grn-2x-offset-y: -540px;
+$tab-reward-menu-grn-2x-width: 34px;
+$tab-reward-menu-grn-2x-height: 52px;
+$tab-reward-menu-grn-2x-total-width: 974px;
+$tab-reward-menu-grn-2x-total-height: 900px;
+$tab-reward-menu-grn-2x-image: "/assets/img/sprite_2019-12-13-09-30@2x.png";
+$tab-reward-menu-grn-2x: (
+  856px,
+  540px,
+  -856px,
+  -540px,
+  34px,
+  52px,
+  974px,
+  900px,
+  "/assets/img/sprite_2019-12-13-09-30@2x.png",
+  "tab-reward-menu-grn@2x"
+);
+$tab-reward-menu-2x-name: "tab-reward-menu@2x";
+$tab-reward-menu-2x-x: 856px;
+$tab-reward-menu-2x-y: 602px;
+$tab-reward-menu-2x-offset-x: -856px;
+$tab-reward-menu-2x-offset-y: -602px;
+$tab-reward-menu-2x-width: 34px;
+$tab-reward-menu-2x-height: 52px;
+$tab-reward-menu-2x-total-width: 974px;
+$tab-reward-menu-2x-total-height: 900px;
+$tab-reward-menu-2x-image: "/assets/img/sprite_2019-12-13-09-30@2x.png";
+$tab-reward-menu-2x: (
+  856px,
+  602px,
+  -856px,
+  -602px,
+  34px,
+  52px,
+  974px,
+  900px,
+  "/assets/img/sprite_2019-12-13-09-30@2x.png",
+  "tab-reward-menu@2x"
+);
+
+$spritesheet-width: 487px;
+$spritesheet-height: 450px;
+$spritesheet-image: "/assets/img/sprite_2019-12-13-09-30.png";
+$spritesheet-sprites: (
+  $caret-next-disabled,
+  $caret-next-hover,
+  $caret-next,
+  $caret-prev-disabled,
+  $caret-prev-hover,
+  $caret-prev,
+  $checkbox-checked-hover-sm,
+  $checkbox-checked-hover,
+  $checkbox-checked-sm,
+  $checkbox-checked,
+  $checkbox-hover-sm,
+  $checkbox-hover,
+  $checkbox-sm,
+  $checkbox,
+  $error-donut,
+  $ic-arrow-left-wht,
+  $ic-arrow-right-double,
+  $ic-arrow-right-new,
+  $ic-back-arrow,
+  $ic-checkbox-selected,
+  $ic-checkbox,
+  $ic-close-filters,
+  $ic-close-modal-hover,
+  $ic-close-modal,
+  $ic-current,
+  $ico-show-password-hover,
+  $ico-show-password,
+  $tab-coupons-grn,
+  $tab-coupons,
+  $tab-my-rewards-grn,
+  $tab-my-rewards,
+  $tab-reward-menu-grn,
+  $tab-reward-menu
+);
+$spritesheet: (487px, 450px, "/assets/img/sprite_2019-12-13-09-30.png", $spritesheet-sprites);
+
+// These "retina group" variables are mappings for the naming and pairing of normal and retina sprites.
+//
+// The list formatted variables are intended for mixins like `retina-sprite` and `retina-sprites`.
+
+$caret-next-disabled-group-name: "caret-next-disabled";
+$caret-next-disabled-group: ("caret-next-disabled", $caret-next-disabled, $caret-next-disabled-2x);
+$caret-next-hover-group-name: "caret-next-hover";
+$caret-next-hover-group: ("caret-next-hover", $caret-next-hover, $caret-next-hover-2x);
+$caret-next-group-name: "caret-next";
+$caret-next-group: ("caret-next", $caret-next, $caret-next-2x);
+$caret-prev-disabled-group-name: "caret-prev-disabled";
+$caret-prev-disabled-group: ("caret-prev-disabled", $caret-prev-disabled, $caret-prev-disabled-2x);
+$caret-prev-hover-group-name: "caret-prev-hover";
+$caret-prev-hover-group: ("caret-prev-hover", $caret-prev-hover, $caret-prev-hover-2x);
+$caret-prev-group-name: "caret-prev";
+$caret-prev-group: ("caret-prev", $caret-prev, $caret-prev-2x);
+
+$checkbox-checked-hover-group-name: "checkbox-checked-hover";
+$checkbox-checked-hover-group: (
+  "checkbox-checked-hover",
+  $checkbox-checked-hover,
+  $checkbox-checked-hover-2x
+);
+$checkbox-checked-group-name: "checkbox-checked";
+$checkbox-checked-group: ("checkbox-checked", $checkbox-checked, $checkbox-checked-2x);
+$checkbox-hover-group-name: "checkbox-hover";
+$checkbox-hover-group: ("checkbox-hover", $checkbox-hover, $checkbox-hover-2x);
+$checkbox-group-name: "checkbox";
+$checkbox-group: ("checkbox", $checkbox, $checkbox-2x);
+$error-donut-group-name: "error-donut";
+$error-donut-group: ("error-donut", $error-donut, $error-donut-2x);
+$ic-arrow-left-wht-group-name: "ic-arrow-left-wht";
+$ic-arrow-left-wht-group: ("ic-arrow-left-wht", $ic-arrow-left-wht, $ic-arrow-left-wht-2x);
+$ic-close-modal-hover-group-name: "ic-close-modal-hover";
+$ic-close-modal-hover-group: (
+  "ic-close-modal-hover",
+  $ic-close-modal-hover,
+  $ic-close-modal-hover-2x
+);
+$ic-close-modal-group-name: "ic-close-modal";
+$ic-close-modal-group: ("ic-close-modal", $ic-close-modal, $ic-close-modal-2x);
+$ico-show-password-hover-group-name: "ico-show-password-hover";
+$ico-show-password-hover-group: (
+  "ico-show-password-hover",
+  $ico-show-password-hover,
+  $ico-show-password-hover-2x
+);
+$ico-show-password-group-name: "ico-show-password";
+$ico-show-password-group: ("ico-show-password", $ico-show-password, $ico-show-password-2x);
+
+$tab-coupons-grn-group-name: "tab-coupons-grn";
+$tab-coupons-grn-group: ("tab-coupons-grn", $tab-coupons-grn, $tab-coupons-grn-2x);
+$tab-coupons-group-name: "tab-coupons";
+$tab-coupons-group: ("tab-coupons", $tab-coupons, $tab-coupons-2x);
+$tab-my-rewards-grn-group-name: "tab-my-rewards-grn";
+$tab-my-rewards-grn-group: ("tab-my-rewards-grn", $tab-my-rewards-grn, $tab-my-rewards-grn-2x);
+$tab-my-rewards-group-name: "tab-my-rewards";
+$tab-my-rewards-group: ("tab-my-rewards", $tab-my-rewards, $tab-my-rewards-2x);
+$tab-reward-menu-grn-group-name: "tab-reward-menu-grn";
+$tab-reward-menu-grn-group: ("tab-reward-menu-grn", $tab-reward-menu-grn, $tab-reward-menu-grn-2x);
+$tab-reward-menu-group-name: "tab-reward-menu";
+$tab-reward-menu-group: ("tab-reward-menu", $tab-reward-menu, $tab-reward-menu-2x);
+$retina-groups: (
+  $caret-next-disabled-group,
+  $caret-next-hover-group,
+  $caret-next-group,
+  $caret-prev-disabled-group,
+  $caret-prev-hover-group,
+  $caret-prev-group,
+  $checkbox-checked-hover-group,
+  $checkbox-checked-group,
+  $checkbox-hover-group,
+  $checkbox-group,
+  $error-donut-group,
+  $ic-arrow-left-wht-group,
+  $ic-close-modal-hover-group,
+  $ic-close-modal-group,
+  $ico-show-password-hover-group,
+  $ico-show-password-group,
+  $tab-coupons-grn-group,
+  $tab-coupons-group,
+  $tab-my-rewards-grn-group,
+  $tab-my-rewards-group,
+  $tab-reward-menu-grn-group,
+  $tab-reward-menu-group
+);
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+// The `retina-sprite` mixin sets up rules and a media query for a sprite/retina sprite.
+//   It should be used with a "retina group" variable.
+//
+// The media query is from CSS Tricks: https://css-tricks.com/snippets/css/retina-display-media-query/
+//
+// $icon-home-group: ('icon-home', $icon-home, $icon-home-2x, );
+//
+// .icon-home {
+//   @include retina-sprite($icon-home-group);
+// }
+@mixin sprite-background-size($sprite) {
+  $sprite-total-width: nth($sprite, 7);
+  $sprite-total-height: nth($sprite, 8);
+  background-size: $sprite-total-width $sprite-total-height;
+}
+
+@mixin retina-sprite($retina-group) {
+  $normal-sprite: nth($retina-group, 2);
+  $retina-sprite: nth($retina-group, 3);
+  @include sprite($normal-sprite);
+
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    @include sprite-image($retina-sprite);
+    @include sprite-background-size($normal-sprite);
+  }
+}
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}
+
+// The `retina-sprites` mixin generates a CSS rule and media query for retina groups
+//   This yields the same output as CSS retina template but can be overridden in SCSS
+//
+// @include retina-sprites($retina-groups);
+@mixin retina-sprites($retina-groups) {
+  @each $retina-group in $retina-groups {
+    $sprite-name: nth($retina-group, 1);
+    .#{$sprite-name} {
+      @include retina-sprite($retina-group);
+    }
+  }
+}

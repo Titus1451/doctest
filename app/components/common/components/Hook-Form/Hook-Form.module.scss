@@ -1,0 +1,23 @@
+@import "colors.scss";
+@import "mixins.scss";
+@import "typography.scss";
+
+// For Demonstration Purposes Only
+.form {
+  :global {
+    .error {
+      @include global-font(12px, 12px, 14px);
+      color: $bright-red;
+      padding: 5px 0px;
+    }
+
+    .filters {
+      @include desktop-only {
+        max-width: 50%;
+      }
+      background: none;
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+}

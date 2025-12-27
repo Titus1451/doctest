@@ -1,0 +1,80 @@
+@import "mixins.scss";
+@import "typography.scss";
+@import "colors.scss";
+
+.underline-select {
+  .faux-select {
+    width: 100%;
+    position: relative;
+    select {
+      width: 100%;
+      padding: 9px 38px 8px 0px;
+      -webkit-appearance: none;
+      border-radius: 0;
+      background-color: transparent;
+      border: none;
+      border-bottom: 2px solid $lt-gray;
+      font: 16px/1em $roboto;
+      &:global(.default-state) {
+        color: $lt-gray;
+      }
+      &:global(.focus-visible) {
+        outline: none !important;
+      }
+      &:required:invalid {
+        color: blue;
+      }
+      &.focus {
+        border-color: darken($lt-gray, 25%);
+        &::placeholder {
+          color: $lt-gray;
+        }
+      }
+    }
+    span {
+      display: block;
+      position: absolute;
+      background-color: $white;
+      height: 33px;
+      width: 38px;
+      padding: 0px;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      color: $md-gray;
+      pointer-events: none;
+      > svg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        font-size: 18px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 8px;
+      }
+    }
+  }
+  &.focus .faux-select {
+    select {
+      border-color: darken($lt-gray, 25%);
+    }
+    span > svg {
+      color: darken($md-gray, 25%);
+    }
+  }
+  &.error {
+    > div:first-child select {
+      border-color: $bright-red;
+    }
+    > div:last-child {
+      @include error-message;
+    }
+    &,
+    &.focus {
+      .faux-select span > svg {
+        color: $bright-red;
+      }
+    }
+  }
+}
