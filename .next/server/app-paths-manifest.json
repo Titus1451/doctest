@@ -1,10 +1,5 @@
 {
   "/_not-found/page": "app/_not-found/page.js",
-  "/decisions/page": "app/decisions/page.js",
-  "/api/decisions/export/route": "app/api/decisions/export/route.js",
-  "/decisions/[id]/page": "app/decisions/[id]/page.js",
-  "/audits/new/page": "app/audits/new/page.js",
-  "/page": "app/page.js",
-  "/audits/page": "app/audits/page.js",
-  "/decisions/new/page": "app/decisions/new/page.js"
+  "/dashboard/getTaxDecisions/new/page": "app/dashboard/getTaxDecisions/new/page.js",
+  "/dashboard/getTaxDecisions/page": "app/dashboard/getTaxDecisions/page.js"
 }
