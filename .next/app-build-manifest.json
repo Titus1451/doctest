@@ -1,20 +1,25 @@
 {
   "pages": {
+    "/dashboard/getTaxDecisions/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/dashboard/getTaxDecisions/page.js"
+    ],
     "/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/dashboard/getTaxDecisions/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/dashboard/getTaxDecisions/page.js"
-    ],
     "/dashboard/getTaxDecisions/new/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/dashboard/getTaxDecisions/new/page.js"
+    ],
+    "/dashboard/getTaxDecisions/[id]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/dashboard/getTaxDecisions/[id]/page.js"
     ]
   }
 }

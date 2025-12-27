@@ -4,6 +4,8 @@ import { db } from "@/lib/TaxDecisions/db";
 import { revalidatePath } from "next/cache";
 import { writeFile } from "fs/promises";
 import { join } from "path";
+import { getServerSession } from "next-auth";
+import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 
 export async function uploadEvidence(formData: FormData) {
   const file = formData.get("file") as File;
@@ -12,6 +14,10 @@ export async function uploadEvidence(formData: FormData) {
   // const auditId = formData.get("auditId") as string;
 
   if (!file) return;
+
+  const session = await getServerSession(authOptions as any);
+  // @ts-ignore
+  const userEmail = session?.user?.email || "Unknown";
 
   const bytes = await file.arrayBuffer();
   const buffer = Buffer.from(bytes);
@@ -37,7 +43,35 @@ export async function uploadEvidence(formData: FormData) {
       fileType: file.type,
       notes,
       decisionId: decisionId || undefined,
+      createdBy: userEmail,
       // auditExplanationId: auditId || undefined,
+    }
+  });
+
+  revalidatePath("/dashboard/getTaxDecisions");
+  revalidatePath(`/dashboard/getTaxDecisions/${decisionId}`);
+}
+
+export async function updateEvidence(
+  evidenceId: string, 
+  updates: { notes?: string }, 
+  decisionId: string
+) {
+  const session = await getServerSession(authOptions as any) as any;
+  
+  // Check authorization - simplified to check if logged in for now, or match role
+  if (!session || !session.user) {
+    throw new Error("Unauthorized");
+  }
+
+    // @ts-ignore
+  const userEmail = session.user.email || "Unknown";
+
+  await db.evidence.update({
+    where: { id: evidenceId },
+    data: {
+      ...updates,
+      updatedBy: userEmail,
     }
   });
 

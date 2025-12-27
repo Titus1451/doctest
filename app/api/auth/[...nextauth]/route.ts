@@ -5,7 +5,7 @@ import User from '@/app/models/userModel';
 //import { connectDB2 } from '@/app/db/db';
 import { dbConnect } from '@/app/db/dbConnect';
 
-const authOptions = {
+export const authOptions = {
   providers: [
     CredentialsProvider({
       name: 'credentials',
@@ -13,38 +13,54 @@ const authOptions = {
       async authorize(credentials) {
         const { email, password } = credentials;
 
-        try {
-          //console.log(email, password);
-          //await connectDB2();
-          const conn = await dbConnect('Prod');
-            const UserMongo = conn.model('UserDocument');
-          const user = await UserMongo.findOne({ email });
-          //console.log(user);
-          if (!user) {
+          // Static Auth Implementation
+          if (email === 'john@gmail.com' && password === '123') {
+            return {
+              id: 'static-user-id',
+              email: 'john@gmail.com',
+              role: 'TAX_TECH',
+              firstName: 'John',
+              lastName: 'Doe',
+              isApproved: true,
+            };
+          }
+          return null;
+
+          /*
+          try {
+            //console.log(email, password);
+            //await connectDB2();
+            const conn = await dbConnect('Prod');
+              const UserMongo = conn.model('UserDocument');
+            const user = await UserMongo.findOne({ email });
             //console.log(user);
+            if (!user) {
+              //console.log(user);
+              return null;
+            }
+  
+            const passwordsMatch = await bcrypt.compare(password, user.password);
+  
+            if (!passwordsMatch) {
+              //console.log(passwordsMatch);
+              return null;
+            }
+            if (!user.isApproved) {
+              return null;
+            }
+            return {
+              id: user._id,
+              email: user.email,
+              role: user.role,
+              firstName: user.firstName,
+              lastName: user.lastName,
+              isApproved: user.isApproved,
+            };
+          } catch (error) {
+            console.log('Error: ', error);
             return null;
           }
-
-          const passwordsMatch = await bcrypt.compare(password, user.password);
-
-          if (!passwordsMatch) {
-            //console.log(passwordsMatch);
-            return null;
-          }
-          if (!user.isApproved) {
-            return null;
-          }
-          return {
-            id: user._id,
-            email: user.email,
-            role: user.role,
-            firstName: user.firstName,
-            lastName: user.lastName,
-            isApproved: user.isApproved,
-          };
-        } catch (error) {
-          console.log('Error: ', error);
-        }
+          */
       },
     }),
   ],

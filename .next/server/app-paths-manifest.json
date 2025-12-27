@@ -1,4 +1,5 @@
 {
-  "/dashboard/getTaxDecisions/page": "app/dashboard/getTaxDecisions/page.js",
-  "/dashboard/getTaxDecisions/new/page": "app/dashboard/getTaxDecisions/new/page.js"
+  "/dashboard/getTaxDecisions/[id]/page": "app/dashboard/getTaxDecisions/[id]/page.js",
+  "/dashboard/getTaxDecisions/new/page": "app/dashboard/getTaxDecisions/new/page.js",
+  "/dashboard/getTaxDecisions/page": "app/dashboard/getTaxDecisions/page.js"
 }

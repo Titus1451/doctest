@@ -81,7 +81,7 @@ export function CreateDecisionForm({ onCreate }: Props) {
             className="input"
             value={form.title}
             onChange={(e) => setForm({ ...form, title: e.target.value })}
-            placeholder="e.g., Marketplace deemed supplier VAT treatment"
+            placeholder="e.g., Nevada Ice Taxability"
             required
           />
         </div>

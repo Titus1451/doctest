@@ -26,7 +26,6 @@ async function getDecisions(jurisdiction?: string, query?: string) {
   return db.decision.findMany({
     where,
     orderBy: { updatedAt: "desc" },
-    include: { author: true },
   });
 }
 

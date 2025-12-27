@@ -5,7 +5,8 @@ import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { writeFile, mkdir } from "fs/promises";
 import { join } from "path";
-
+import { getServerSession } from "next-auth";
+import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 /* ✅ Explicit type instead of Prisma internal types */
 type EvidenceCreateInput = {
   fileName: string;
@@ -66,9 +67,10 @@ export async function createDecision(formData: FormData) {
 
   const jurisdictions = formData.getAll("jurisdictions") as string[];
 
-  const adminUser = await db.user.findUnique({
-    where: { email: "admin@company.com" },
-  });
+  /* ✅ FIX: Get session user instead of DB lookup */
+  const session = await getServerSession(authOptions as any);
+  // @ts-ignore
+  const userId = session?.user?.id || "Unknown"; 
 
   await db.decision.create({
     data: {
@@ -77,9 +79,9 @@ export async function createDecision(formData: FormData) {
       rationale,
       status: status || "DRAFT",
       taxType,
-      author: adminUser
-        ? { connect: { id: adminUser.id } }
-        : undefined,
+      authorId: userId, // ✅ Simply set the string ID (or "Unknown")
+      createdBy: userId,
+      updatedBy: userId,
       jurisdictionCodes: jurisdictions.join(","),
       evidence: evidenceData.length
         ? { create: evidenceData } // ✅ array form

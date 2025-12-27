@@ -87,7 +87,7 @@ export function DecisionForm() {
     <form action={clientAction} className="space-y-6 max-w-2xl bg-white p-8 rounded-xl border shadow-sm">
       <div className="space-y-2">
         <Label htmlFor="title">Title</Label>
-        <Input id="title" name="title" placeholder="e.g. VAT treatment of digital services 2024" required />
+        <Input id="title" name="title" placeholder="e.g. Nevada Ice Taxability" required />
       </div>
 
       <div className="space-y-2">

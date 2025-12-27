@@ -7,16 +7,6 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model User {
-  id        String   @id @default(cuid())
-  email     String   @unique
-  name      String?
-  role      String   @default("VIEWER") // ADMIN, EDITOR, VIEWER
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-  decisions Decision[]
-}
-
 model Decision {
   id           String         @id @default(cuid())
   title        String
@@ -31,7 +21,8 @@ model Decision {
   evidence     Evidence[]
   jurisdictionCodes String?   // Comma separated codes
   authorId     String?
-  author       User?          @relation(fields: [authorId], references: [id])
+  createdBy    String?
+  updatedBy    String?
 }
 
 model AuditExplanation {
@@ -56,4 +47,7 @@ model Evidence {
   decision           Decision?         @relation(fields: [decisionId], references: [id])
   auditExplanationId String?
   auditExplanation   AuditExplanation? @relation(fields: [auditExplanationId], references: [id])
+  createdBy          String?
+  updatedBy          String?
+  updatedAt          DateTime          @updatedAt
 }

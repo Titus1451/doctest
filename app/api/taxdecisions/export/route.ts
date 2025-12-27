@@ -5,7 +5,6 @@ export async function GET() {
   try {
     const decisions = await db.decision.findMany({
       include: {
-        author: true,
         evidence: true,
       },
       orderBy: {
@@ -21,7 +20,6 @@ export async function GET() {
       "Status",
       "Tax Type",
       "Jurisdictions",
-      "Author",
       "Created Date",
       "Updated Date",
       "External Links",
@@ -56,7 +54,6 @@ export async function GET() {
         safe(decision.status),
         safe(decision.taxType),
         safe(jurisdictions),
-        safe(decision.author?.name ?? "Unknown"),
         safe(decision.createdAt.toISOString()),
         safe(decision.updatedAt.toISOString()),
         safe(links),
