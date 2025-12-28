@@ -96,6 +96,23 @@ export function EditDecisionForm({ decision }: EditDecisionFormProps) {
                     : "Select jurisdictions..."}
                 </span>
              </div>
+
+             {/* Hidden input for HTML5 validation */}
+             <input 
+               tabIndex={-1}
+               autoComplete="off"
+               style={{ opacity: 0, position: 'absolute', height: 0, width: 0, pointerEvents: 'none' }}
+               value={selectedJurisdictions.join(",")}
+               onChange={() => {}}
+               required
+               onInvalid={(e) => {
+                 (e.target as HTMLInputElement).setCustomValidity("Please select at least one jurisdiction");
+               }}
+               onInput={(e) => {
+                 (e.target as HTMLInputElement).setCustomValidity("");
+               }}
+             />
+
              <div className="absolute top-full left-0 z-50 w-full min-w-[8rem] overflow-hidden rounded-md border bg-white text-slate-950 shadow-md hidden group-hover:block hover:block">
                 <div className="max-h-64 overflow-y-auto p-1">
                   {JURISDICTIONS.map((j) => (
@@ -134,6 +151,7 @@ export function EditDecisionForm({ decision }: EditDecisionFormProps) {
               }}
               name={isCustomTaxType ? undefined : "taxType"}
               defaultValue={isStandardTax ? initialTaxType : ""}
+              required
             >
               <option value="" disabled>Select Tax Type...</option>
               <option value="Sales Tax">Sales Tax</option>
@@ -149,6 +167,7 @@ export function EditDecisionForm({ decision }: EditDecisionFormProps) {
                  placeholder="Enter custom tax type..." 
                  defaultValue={initialTaxType}
                  autoFocus
+                 required
                />
                <Button 
                  type="button" 
@@ -171,6 +190,7 @@ export function EditDecisionForm({ decision }: EditDecisionFormProps) {
             name="status" 
             defaultValue={decision.status}
             className="flex h-9 w-full rounded-md border border-slate-200 bg-transparent px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-slate-950"
+            required
           >
             <option value="DRAFT">Draft</option>
             <option value="FINAL">Final</option>

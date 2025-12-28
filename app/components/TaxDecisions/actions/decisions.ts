@@ -21,6 +21,11 @@ export async function createDecision(formData: FormData) {
   const rationale = formData.get("rationale") as string;
   const status = formData.get("status") as string;
   const taxType = formData.get("taxType") as string;
+  const jurisdictions = formData.getAll("jurisdictions") as string[];
+
+  if (!title || !summary || !rationale || !taxType || jurisdictions.length === 0) {
+    throw new Error("Missing required fields: title, summary, rationale, taxType, and jurisdictions are mandatory.");
+  }
 
   const links = formData.getAll("links") as string[];
   const files = formData.getAll("files") as File[];
@@ -64,8 +69,6 @@ export async function createDecision(formData: FormData) {
       });
     }
   }
-
-  const jurisdictions = formData.getAll("jurisdictions") as string[];
 
   /* ✅ FIX: Get session user instead of DB lookup */
   const session = await getServerSession(authOptions as any);
@@ -113,6 +116,10 @@ export async function updateDecision(id: string, formData: FormData) {
   const status = formData.get("status") as string;
   const taxType = formData.get("taxType") as string;
   const jurisdictions = formData.getAll("jurisdictions") as string[];
+
+  if (!title || !summary || !rationale || !taxType || jurisdictions.length === 0) {
+    throw new Error("Missing required fields: title, summary, rationale, taxType, and jurisdictions are mandatory.");
+  }
 
   /*
    Note: For simplicity in this implementation, we are NOT handling new file uploads 

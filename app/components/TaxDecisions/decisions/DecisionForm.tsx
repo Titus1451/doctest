@@ -107,6 +107,23 @@ export function DecisionForm() {
                     : "Select jurisdictions..."}
                 </span>
              </div>
+             
+             {/* Hidden input for HTML5 validation */}
+             <input 
+               tabIndex={-1}
+               autoComplete="off"
+               style={{ opacity: 0, position: 'absolute', height: 0, width: 0, pointerEvents: 'none' }}
+               value={selectedJurisdictions.join(",")}
+               onChange={() => {}}
+               required
+               onInvalid={(e) => {
+                 (e.target as HTMLInputElement).setCustomValidity("Please select at least one jurisdiction");
+               }}
+               onInput={(e) => {
+                 (e.target as HTMLInputElement).setCustomValidity("");
+               }}
+             />
+
              <div className="absolute top-full left-0 z-50 w-full min-w-[8rem] overflow-hidden rounded-md border bg-white text-slate-950 shadow-md animate-in fade-in-0 zoom-in-95 hidden group-hover:block hover:block">
                 <div className="max-h-64 overflow-y-auto p-1">
                   {JURISDICTIONS.map((j) => (
@@ -142,17 +159,11 @@ export function DecisionForm() {
               onChange={(e) => {
                 if (e.target.value === "CUSTOM_PLUS") {
                   setIsCustomTaxType(true);
-                  // Clear value so the input starts empty or user types afresh
-                  // You might strictly rely on the input's own state if we were controlled fully, 
-                  // but here we just switch modes.
-                } else {
-                  // For standard options, we let the select hold the value, 
-                  // but we must ensure the FormData picks it up. 
-                  // Actually, strictly speaking if we use a controlled component we can sync a hidden input.
                 }
               }}
               name={isCustomTaxType ? undefined : "taxType"} // Only use this as name if NOT custom
               defaultValue=""
+              required
             >
               <option value="" disabled>Select Tax Type...</option>
               <option value="Sales Tax">Sales Tax</option>
@@ -167,6 +178,7 @@ export function DecisionForm() {
                  name="taxType" 
                  placeholder="Enter custom tax type..." 
                  autoFocus
+                 required
                />
                <Button 
                  type="button" 
@@ -188,6 +200,7 @@ export function DecisionForm() {
             id="status" 
             name="status" 
             className="flex h-9 w-full rounded-md border border-slate-200 bg-transparent px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-slate-950"
+            required
           >
             <option value="DRAFT">Draft</option>
             <option value="FINAL">Final</option>

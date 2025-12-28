@@ -1,9 +1,8 @@
 {
-  "/_not-found/page": "app/_not-found/page.js",
   "/(auth)/login/page": "app/(auth)/login/page.js",
-  "/dashboard/getTaxDecisions/[id]/page": "app/dashboard/getTaxDecisions/[id]/page.js",
   "/dashboard/getTaxDecisions/[id]/edit/page": "app/dashboard/getTaxDecisions/[id]/edit/page.js",
+  "/dashboard/getTaxDecisions/[id]/page": "app/dashboard/getTaxDecisions/[id]/page.js",
   "/dashboard/getTaxDecisions/page": "app/dashboard/getTaxDecisions/page.js",
-  "/api/auth/[...nextauth]/route": "app/api/auth/[...nextauth]/route.js",
-  "/dashboard/getTaxDecisions/new/page": "app/dashboard/getTaxDecisions/new/page.js"
+  "/dashboard/getTaxDecisions/new/page": "app/dashboard/getTaxDecisions/new/page.js",
+  "/api/auth/[...nextauth]/route": "app/api/auth/[...nextauth]/route.js"
 }
