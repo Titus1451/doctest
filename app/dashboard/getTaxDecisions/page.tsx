@@ -6,6 +6,9 @@ import { Card, CardHeader, CardTitle } from "@/app/components/TaxDecisions/ui/ca
 import { db } from "@/lib/TaxDecisions/db";
 import { DecisionsFilter } from "@/app/components/TaxDecisions/decisions/DecisionsFilter";
 import { cn } from "@/lib";
+import { getServerSession } from "next-auth/next";
+import { authOptions } from "@/app/api/auth/[...nextauth]/route";
+import { notFound } from "next/navigation";
 
 import ExportCsvButton from "./ExportCsvButton"; // 👈 NEW
 
@@ -14,6 +17,9 @@ import { JURISDICTIONS } from "@/lib/TaxDecisions/constants";
 async function getDecisions(params: { jurisdiction?: string; query?: string; status?: string; taxType?: string }) {
   const { jurisdiction, query, status, taxType } = params;
   const where: any = {};
+
+  
+
 
   // 1. Categorical Filters (Top-level for performance)
   if (jurisdiction && jurisdiction !== "ALL") {
@@ -72,6 +78,9 @@ export default async function DecisionsPage({
 }: {
   searchParams: { jurisdiction?: string; query?: string; status?: string; taxType?: string };
 }) {
+  const session = await getServerSession(authOptions as any);
+  // @ts-ignore
+  const isAuthorized = session?.user?.role === 'TAX_TECH';
   const decisions = await getDecisions(searchParams);
 
   return (
@@ -80,13 +89,14 @@ export default async function DecisionsPage({
         <div className="flex gap-2">
           {/* ✅ Client component, same position */}
           <ExportCsvButton />
-
+          { isAuthorized && (
           <Link href="/dashboard/getTaxDecisions/new">
             <Button className="flex items-center gap-2">
               <Plus className="h-4 w-4" />
               New Decision
             </Button>
           </Link>
+)}
         </div>
       </Header>
 

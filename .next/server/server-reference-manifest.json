@@ -22,18 +22,22 @@
     },
     "08bab6e946da1e2886ab065bfd323f10bf44b13a": {
       "workers": {
-        "app/dashboard/getTaxDecisions/[id]/edit/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Ftitusay%2FCoding%20Projects%2Fdoctest%2Fapp%2Fcomponents%2FTaxDecisions%2Factions%2Fdecisions.ts%22%2C%5B%22createDecision%22%2C%22updateDecision%22%5D%5D%2C%5B%22%2FUsers%2Ftitusay%2FCoding%20Projects%2Fdoctest%2Fapp%2Fcomponents%2FTaxDecisions%2Factions%2Fevidence.ts%22%2C%5B%22uploadEvidence%22%2C%22updateEvidence%22%5D%5D%5D&__client_imported__=true!"
+        "app/dashboard/getTaxDecisions/[id]/edit/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Ftitusay%2FCoding%20Projects%2Fdoctest%2Fapp%2Fcomponents%2FTaxDecisions%2Factions%2Fdecisions.ts%22%2C%5B%22createDecision%22%2C%22updateDecision%22%5D%5D%2C%5B%22%2FUsers%2Ftitusay%2FCoding%20Projects%2Fdoctest%2Fapp%2Fcomponents%2FTaxDecisions%2Factions%2Fevidence.ts%22%2C%5B%22uploadEvidence%22%2C%22updateEvidence%22%5D%5D%5D&__client_imported__=true!",
+        "app/dashboard/getTaxDecisions/new/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Ftitusay%2FCoding%20Projects%2Fdoctest%2Fapp%2Fcomponents%2FTaxDecisions%2Factions%2Fdecisions.ts%22%2C%5B%22createDecision%22%2C%22updateDecision%22%5D%5D%5D&__client_imported__=true!"
       },
       "layer": {
-        "app/dashboard/getTaxDecisions/[id]/edit/page": "action-browser"
+        "app/dashboard/getTaxDecisions/[id]/edit/page": "action-browser",
+        "app/dashboard/getTaxDecisions/new/page": "action-browser"
       }
     },
     "c10bfdf353d71443bcd7543907fca27a102b67a9": {
       "workers": {
-        "app/dashboard/getTaxDecisions/[id]/edit/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Ftitusay%2FCoding%20Projects%2Fdoctest%2Fapp%2Fcomponents%2FTaxDecisions%2Factions%2Fdecisions.ts%22%2C%5B%22createDecision%22%2C%22updateDecision%22%5D%5D%2C%5B%22%2FUsers%2Ftitusay%2FCoding%20Projects%2Fdoctest%2Fapp%2Fcomponents%2FTaxDecisions%2Factions%2Fevidence.ts%22%2C%5B%22uploadEvidence%22%2C%22updateEvidence%22%5D%5D%5D&__client_imported__=true!"
+        "app/dashboard/getTaxDecisions/[id]/edit/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Ftitusay%2FCoding%20Projects%2Fdoctest%2Fapp%2Fcomponents%2FTaxDecisions%2Factions%2Fdecisions.ts%22%2C%5B%22createDecision%22%2C%22updateDecision%22%5D%5D%2C%5B%22%2FUsers%2Ftitusay%2FCoding%20Projects%2Fdoctest%2Fapp%2Fcomponents%2FTaxDecisions%2Factions%2Fevidence.ts%22%2C%5B%22uploadEvidence%22%2C%22updateEvidence%22%5D%5D%5D&__client_imported__=true!",
+        "app/dashboard/getTaxDecisions/new/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Ftitusay%2FCoding%20Projects%2Fdoctest%2Fapp%2Fcomponents%2FTaxDecisions%2Factions%2Fdecisions.ts%22%2C%5B%22createDecision%22%2C%22updateDecision%22%5D%5D%5D&__client_imported__=true!"
       },
       "layer": {
-        "app/dashboard/getTaxDecisions/[id]/edit/page": "action-browser"
+        "app/dashboard/getTaxDecisions/[id]/edit/page": "action-browser",
+        "app/dashboard/getTaxDecisions/new/page": "action-browser"
       }
     }
   },
